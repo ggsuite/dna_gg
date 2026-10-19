@@ -100,10 +100,9 @@ packages:
   dna_github:
     dependency: "direct main"
     description:
-      name: dna_github
-      sha256: "5e5dc8f85654c091a3b6d60c49c52fd6a78267da47d39f8a41149692fe722820"
-      url: "https://pub.dev"
-    source: hosted
+      path: "../dna_github"
+      relative: true
+    source: path
     version: "0.1.1"
   dna_index:
     dependency: "direct main"
