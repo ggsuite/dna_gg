@@ -100,9 +100,10 @@ Ask the user whether the ticket is planned before it is implemented.
 
 If yes, write the plan into the project management repo, following its
 `doc/guides/pm-repo-guide.md` if present, otherwise its other guides: the
-goal, the affected repos, the rough steps and open questions. Without a
-project management repo, put the plan into the ticket itself. Let the user
-review the plan and revise it until they confirm it.
+goal, the requirements it fulfils, the affected repos, the rough steps and
+open questions. Without a project management repo, put the plan into the
+ticket itself. Let the user review the plan and revise it until they confirm
+it.
 
 ## Implement (optional)
 
