@@ -28,7 +28,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@ggdna/dna-github": "^0.1.0",
+    "@ggdna/dna-github": "^0.1.1",
     "@ggdna/dna-index": "^0.2.0",
     "@ggdna/dna-install": "^0.2.0"
   },
