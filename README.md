@@ -1,75 +1,26 @@
 # dna_gg
 
-The DNA layer for the `gg` CLI workflow: ticket, commit, push, review,
-publish.
+English | [Deutsch](README.de.md)
 
-## Guides
+[![CI](https://github.com/ggsuite/dna_gg/actions/workflows/quick_check.yaml/badge.svg)](https://github.com/ggsuite/dna_gg/actions/workflows/quick_check.yaml)
 
-- `dna/doc/guides/develop-guide.md`,
-  `dna/doc/guides/develop-without-ai-guide.md` — the ticket driven
-  workflow, with and without an AI
-- `dna/doc/guides/for-ai/ai-dev-guide.md` — the same workflow as
-  instructions for an agent
-- `dna/doc/guides/install-guide/install-gg-guide.md`,
-  `dna/doc/guides/install-guide/install-gg-workspace-guide.md` — install
-  `gg` and set up a workspace
+Gives a repo the gg ticket workflow from ticket to release: guides, agent
+instructions and the /gg skills.
 
-## CLAUDE.md
+## Motivation
 
-- `dna/CLAUDE.md` — points the agent to the `ai-dev-guide` and the
-  skills. helix writes it into the managed block of the consumer's
-  `CLAUDE.md` (`<!-- helix:claude_md:start/end -->`), everything outside
-  the block stays with the repo.
+A ticket often changes several repos at once and runs through the same steps
+every time: create the ticket, commit, push, review, publish and clean up. Each
+step has its own `gg` command and its own rules — the checks must be green
+before a commit, the blog posts are written before the pull requests open, and
+`gg do publish` is interactive, so the user runs it, not the agent. A developer
+and an agent working together should know at every point which step comes
+next.
 
-## Skills
-
-All skills of this layer are prefixed with `gg-`:
-
-- `/gg` — lists the skills below and says which one comes next
-- `/gg-ticket` — creates a ticket and adds the repos it needs
-- `/gg-commit` — proposes a message and commits through `gg do commit`
-- `/gg-push` — pushes the ticket branches
-- `/gg-review` — writes the blog posts and opens the pull requests
-- `/gg-publish` — releases the ticket
-- `/gg-cleanup` — removes what the ticket left behind
-
-## Scripts
-
-- `dna/scripts/delete-feature-branch.js` — the one script this layer calls
-  itself, from `/gg-cleanup`, with the two functions it imports:
-  `dna/scripts/functions/colors.js` and
-  `dna/scripts/functions/run-command.js`
-
-These three files are byte-identical copies of their originals in
-[dna_scripts](https://github.com/ggdna/dna_scripts). They are duplicated
-on purpose so that this layer does not drag the whole script set into
-every repo that only wants the gg workflow. A repo that wants the full
-set lists `dna_scripts` as a layer of its own — the copies are identical,
-so both layers together produce exactly the same files.
-
-## Layers
-
-Builds on [dna_install](https://github.com/ggdna/dna_install) for the
-install overview and [dna_index](https://github.com/ggdna/dna_index) for
-the repo index every gg repo keeps.
-
-It extends the `@tooling` section of the install overview through
-`dna/doc/guides/install-guide.overrides.md`: it adds `Install gg` and
-appends the `Workspace` section.
-
-## Variables
-
-- `dnaCopyrightHolder` — the name in the license header of every file
-- `dnaCompany`, `dnaGitOrg`, `dnaGitOrgUrl` — the organization repos are
-  created in
-- `dnaJiraPrefix` — the prefix of a ticket id
-- `dnaGitQuickCheckPipelineName` — the name the branch rules require
-- `dnaPubDevPublisher` — the pub.dev publisher packages are transferred to
-
-`dnaCopyrightHolder`, `dnaCompany` and `dnaJiraPrefix` name the
-organization, so they are never inherited: every layer or project listing
-this one sets them in its own `dna/_vars.json`. `helix init` and
-`helix add` ask for the missing ones.
+This layer puts the same workflow into every repo: the guides for working with
+and without an AI, the instructions an agent reads from `CLAUDE.md`, and one
+skill per step. Its content started out in the former dna_base and became a
+layer of its own.
 
 ## Usage
 
@@ -81,10 +32,117 @@ dart pub add dev:dna_gg     # Dart projects
 helix init
 ```
 
-The placed test instantiates and verifies the DNA on every test run.
+`helix init` places a test that instantiates and verifies the DNA on every
+test run. It copies the guides to `doc/guides/`, the skills to
+`.claude/skills/` and writes `dna/CLAUDE.md` into the managed block of the
+repo's `CLAUDE.md`. Together with the parent layers the repo also gets the
+install overview and the index guide in `doc/`, the GitHub setup guide in
+`guides/`, `scripts/setup-github-repo.js` and
+`.github/workflows/quick_check.yaml`.
+
+A gg workspace gets the layer from `gg do init workspace`. Start Claude Code in
+the workspace and type `/gg-ticket` to begin a ticket; `/gg` lists the skills
+and says which one comes next.
+
+## Guides
+
+- `dna/doc/guides/develop-guide.md` — the ticket workflow with Claude Code:
+  install, prepare the workspace, then one skill per step
+- `dna/doc/guides/develop-without-ai-guide.md` — the same workflow with the
+  `gg do` commands typed by hand
+- `dna/doc/guides/for-ai/ai-dev-guide.md` — the workflow as instructions for an
+  agent: ask for the ticket data, choose the project management repo and the
+  code repos, keep the publish config current, commit, push, review, publish
+- `dna/doc/guides/install-guide/install-gg-guide.md` — install the `gg` CLI and
+  put the pub cache on the `PATH`
+- `dna/doc/guides/install-guide/install-gg-workspace-guide.md` — create a gg
+  workspace with `gg do init workspace` and add the repos
+- `dna/doc/guides/install-guide.overrides.md` — extends the install overview of
+  dna_install, see [Layers](#layers)
+
+## Skills
+
+All skills of this layer carry the `gg-` prefix, except `/gg` itself:
+
+- `/gg` — lists the skills below in the order of a ticket's life and says which
+  one comes next
+- `/gg-ticket` — creates a ticket and adds the project management repo and the
+  code repos it needs
+- `/gg-commit` — proposes a message and commits through `gg do commit`, or
+  `gg one do commit` inside a single repo
+- `/gg-push` — pushes the ticket branches with `gg do push`
+- `/gg-review` — writes the blog posts, opens the pull requests with
+  `gg do review` and reviews the changes
+- `/gg-publish` — prepares the release and hands `gg do publish` over to the
+  user
+- `/gg-cleanup` — removes the feature branches and the ticket folder a
+  published ticket left behind
+
+## Configuration
+
+- `dna/CLAUDE.md` — points the agent to the AI development guide and the
+  skills. helix writes it into the managed block of the consuming repo's
+  `CLAUDE.md` (`<!-- helix:claude_md:start -->` to
+  `<!-- helix:claude_md:end -->`); everything outside the block stays with the
+  repo
+
+## Scope
+
+The layer describes the workflow; the `gg` CLI that runs it is a separate
+package, which the install guide sets up. The layer leaves the GitHub settings
+and the quick check workflow to dna_github, the install overview to
+dna_install, the index files to dna_index, the blog posts to dna_blog and the
+project management repo to dna_plan. It ships no scripts of its own.
+
+## Layers
+
+- [dna_install](https://github.com/ggdna/dna_install) — the install overview
+  and the install guides of the tools a development machine needs, plus the
+  `/install` skill
+- [dna_index](https://github.com/ggdna/dna_index) — the guide, the template and
+  the `/index` skill for the index file every gg repo keeps; `/gg-ticket` reads
+  the index files to choose the repos of a ticket
+- [dna_github](https://github.com/ggdna/dna_github) — the GitHub setup guide,
+  `scripts/setup-github-repo.js` and the quick check workflow the branch rules
+  require
+
+The layer extends the `@tooling` section of dna_install's install overview
+through `dna/doc/guides/install-guide.overrides.md`: it replaces the list of
+that section with one that adds `Install gg`, and appends a `Workspace` section
+with the workspace guide.
+
+## Variables
+
+- `dnaCopyrightHolder` — the holder named in the copyright header of every
+  placed file
+- `dnaCompany` — the company the install guide of `gg` names
+- `dnaJiraPrefix` — the prefix of a ticket id in the examples of the guides and
+  skills, e.g. `GGS-145`; its casing is kept
+- `dnaGitQuickCheckPipelineName` — the name of the quick check job of
+  dna_github's workflow, which the branch rules require; this layer sets it to
+  `Quick Check`
+- `dnaGitOrg`, `dnaGitOrgUrl` — the GitHub organization and its URL; no file of
+  this layer uses them, layers combined with it such as dna_readme do
+- `dnaPubDevPublisher` — the pub.dev publisher of the organization's packages;
+  no file of this layer reads it
+
+`mustOverride` in `dna/_dna.json` forces every repo or layer that lists this
+layer to set `dnaCopyrightHolder`, `dnaCompany` and `dnaJiraPrefix` in its own
+`dna/_vars.json`, because they name the organization; `helix init` and
+`helix add` ask for the missing ones. `dnaGitQuickCheckPipelineName` is the
+exception: dna_github makes every layer set it, this layer sets it once, and
+the repos and layers listing dna_gg inherit it.
 
 ## Development
 
 The `dna/` folder is hand-authored source and is never generated. The repo
-instantiates its own DNA — run `dart test` after changes; commit first, a
-file the DNA would overwrite must not carry uncommitted work.
+instantiates its own DNA — run `dart test` after changes; commit first, a file
+the DNA would overwrite must not carry uncommitted work.
+
+Edit the files below `dna/`, never the files the test writes: their copies in
+`doc/`, `.claude/` and the managed block of `CLAUDE.md`, and the files of the
+parent layers in `guides/`, `scripts/` and `.github/`.
+
+## License
+
+MIT — see [LICENSE](LICENSE).

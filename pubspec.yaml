@@ -1,5 +1,5 @@
 name: dna_gg
-description: "DNA layer: gg CLI workflow guides, repo setup scripts and CI check"
+description: "Gives a repo the gg ticket workflow from ticket to release: guides, agent instructions and the /gg skills."
 version: 0.11.0
 repository: https://github.com/ggsuite/dna_gg.git
 
