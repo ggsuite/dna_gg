@@ -31,7 +31,7 @@
       "ecosystem": "node",
       "resolvedVersion": "0.1.0",
       "via": null,
-      "hash": "0xae24c13573219f91"
+      "hash": "0xf541b93b3dc7995d"
     },
     {
       "name": "self",
@@ -154,12 +154,12 @@
       "hash": "0xa0da6a6877bb94c2"
     },
     {
-      "path": "doc/templates/index-template.jsonc",
-      "hash": "0x16c3a8d50c72ed6d"
+      "path": "doc/guides/setup-github-guide.md",
+      "hash": "0x836d4ca942a58b9c"
     },
     {
-      "path": "guides/setup-github-guide.md",
-      "hash": "0x8681f11bbfaa0c00"
+      "path": "doc/templates/index-template.jsonc",
+      "hash": "0x16c3a8d50c72ed6d"
     },
     {
       "path": "scripts/setup-github-repo.js",
