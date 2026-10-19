@@ -31,7 +31,7 @@
       "ecosystem": "node",
       "resolvedVersion": "0.1.1",
       "via": null,
-      "hash": "0xf541b93b3dc7995d"
+      "hash": "0xae24c13573219f91"
     },
     {
       "name": "self",
@@ -39,7 +39,7 @@
       "ecosystem": null,
       "resolvedVersion": null,
       "via": null,
-      "hash": "0x0c681b9f487d5439"
+      "hash": "0x80b4e958c7ac9afb"
     }
   ],
   "claude": {
@@ -71,7 +71,7 @@
     },
     {
       "path": ".claude/skills/gg-ticket/SKILL.md",
-      "hash": "0xe2e320fd71159027"
+      "hash": "0xa238364995ac50f8"
     },
     {
       "path": ".claude/skills/gg/SKILL.md",
@@ -99,7 +99,7 @@
     },
     {
       "path": "doc/guides/for-ai/ai-dev-guide.md",
-      "hash": "0x89583fdaaa73aa60"
+      "hash": "0xb4ae698a82bc9e2c"
     },
     {
       "path": "doc/guides/index-guide.md",
@@ -154,12 +154,12 @@
       "hash": "0xa0da6a6877bb94c2"
     },
     {
-      "path": "doc/guides/setup-github-guide.md",
-      "hash": "0x836d4ca942a58b9c"
-    },
-    {
       "path": "doc/templates/index-template.jsonc",
       "hash": "0x16c3a8d50c72ed6d"
+    },
+    {
+      "path": "guides/setup-github-guide.md",
+      "hash": "0x8681f11bbfaa0c00"
     },
     {
       "path": "scripts/setup-github-repo.js",
