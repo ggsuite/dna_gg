@@ -1,17 +1,17 @@
 name: dna_gg
 description: "DNA layer: gg CLI workflow guides, repo setup scripts and CI check"
-version: 0.11.0
+version: 0.11.1
 repository: https://github.com/ggsuite/dna_gg.git
 
 environment:
   sdk: ">=3.13.0 <4.0.0"
 
 dependencies:
-  dna_github: ^0.1.0
+  dna_github: ^0.1.1
   dna_index: ^0.2.0
   dna_install: ^0.2.0
 
 dev_dependencies:
-  helix: ^1.12.0
+  helix: ^1.13.0
   lints: ^6.1.0
   test: ^1.33.0
