@@ -45,3 +45,21 @@ This:
 
 Add `--require-review` to also require one approving review and resolved
 review threads.
+
+## 5. Make the README check blocking
+
+The quick check runs `node scripts/check-readme.js` when the repo has that
+script; `dna_readme` ships it. A repo without it skips the check.
+
+By default a README finding shows up as a warning on the run and the quick
+check stays green. Once the README passes, make findings fail the quick check:
+
+```bash
+gh variable set README_CHECK --body required
+```
+
+Delete the variable to make the check advisory again:
+
+```bash
+gh variable delete README_CHECK
+```

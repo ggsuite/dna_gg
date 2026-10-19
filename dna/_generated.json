@@ -31,7 +31,7 @@
       "ecosystem": "node",
       "resolvedVersion": "0.1.0",
       "via": null,
-      "hash": "0xae24c13573219f91"
+      "hash": "0x1410874c0723c6d9"
     },
     {
       "name": "self",
@@ -87,7 +87,7 @@
     },
     {
       "path": ".github/workflows/quick_check.yaml",
-      "hash": "0xf3320fb8f530a565"
+      "hash": "0xa13ab96e09a3d3bd"
     },
     {
       "path": "doc/guides/develop-guide.md",
@@ -159,7 +159,7 @@
     },
     {
       "path": "guides/setup-github-guide.md",
-      "hash": "0x8681f11bbfaa0c00"
+      "hash": "0xa9c2f8a55954ece1"
     },
     {
       "path": "scripts/setup-github-repo.js",

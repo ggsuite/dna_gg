@@ -18,3 +18,25 @@ jobs:
 
       # Uses the Node.js preinstalled on the runner image.
       - run: npx @tssuite/ggwsm one did commit
+
+      # The README check comes with dna_readme. A repo without
+      # scripts/check-readme.js skips the next two steps.
+      - name: Set up Node.js for the README check
+        if: hashFiles('scripts/check-readme.js') != ''
+        uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          package-manager-cache: false
+
+      # Advisory until the repo sets the GitHub variable README_CHECK to
+      # 'required': the findings show up as warnings and the quick check
+      # stays green. With 'required' they show up as errors and a finding
+      # fails the quick check. bash runs with pipefail, so the exit code of
+      # the check survives sed.
+      - name: Check README
+        if: hashFiles('scripts/check-readme.js') != ''
+        continue-on-error: ${{ vars.README_CHECK != 'required' }}
+        shell: bash
+        env:
+          LEVEL: ${{ vars.README_CHECK == 'required' && 'error' || 'warning' }}
+        run: node scripts/check-readme.js | sed "s/^✗ /::$LEVEL file=README.md::/"
