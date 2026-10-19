@@ -1,2 +1,4 @@
 minimumReleaseAgeExclude:
   - '@ggdna/dna-github@0.0.2'
+overrides:
+  "@ggdna\/dna-github": link:../dna_github

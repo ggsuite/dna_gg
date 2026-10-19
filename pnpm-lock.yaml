@@ -4,13 +4,16 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  '@ggdna/dna-github': link:../dna_github
+
 importers:
 
   .:
     dependencies:
       '@ggdna/dna-github':
-        specifier: ^0.1.0
-        version: 0.1.0
+        specifier: link:../dna_github
+        version: link:../dna_github
       '@ggdna/dna-index':
         specifier: ^0.2.0
         version: 0.2.0
@@ -26,10 +29,6 @@ importers:
         version: 3.9.10
 
 packages:
-
-  '@ggdna/dna-github@0.1.0':
-    resolution: {integrity: sha512-AsAJPAcB4VMYe7/1ipCCqn9Sg/k6C1h/RYXPBb52Vz2SVq37O+vB5ihgl1sjBPSQ56x9/j6C3yQiFXJNDrQ3KQ==}
-    engines: {node: '>=22'}
 
   '@ggdna/dna-index@0.2.0':
     resolution: {integrity: sha512-azbA8fMhn01eSvEcjJc4aXrh8H0svc/lru2MJVAOaZ+sLnzm3bTrlQTxfcJ5sm/bidtMAh9+738AfAJcQdLP2A==}
@@ -51,8 +50,6 @@ packages:
     resolution: {integrity: sha512-KTDyRTYX8sWmKXAikPHHSyc63CRPETMctyjKFupcC6OBLXT3xsN0e9aF7m+mIXutFWpUXuedtowG7iLOzp0kQg==}
 
 snapshots:
-
-  '@ggdna/dna-github@0.1.0': {}
 
   '@ggdna/dna-index@0.2.0': {}
 
