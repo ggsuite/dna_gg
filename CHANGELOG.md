@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- The ticket plan names the requirements the ticket fulfils
+
 ## 0.11.0 - 2026-10-19
 
 ## 0.10.0 - 2026-10-18
