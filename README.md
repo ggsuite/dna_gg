@@ -29,6 +29,7 @@ All skills of this layer are prefixed with `gg-`:
 - `/gg-ticket` — creates a ticket and adds the repos it needs
 - `/gg-commit` — proposes a message and commits through `gg do commit`
 - `/gg-push` — pushes the ticket branches
+- `/gg-review` — writes the blog posts and opens the pull requests
 - `/gg-publish` — releases the ticket
 - `/gg-cleanup` — removes what the ticket left behind
 
