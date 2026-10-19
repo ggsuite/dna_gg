@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.12.0 - 2026-10-19
 
 - The ticket plan names the requirements the ticket fulfils
 - Engineer the requirements before planning a ticket when the project

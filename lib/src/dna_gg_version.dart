@@ -9,4 +9,4 @@
 // coverage:ignore-file
 
 /// The version of the `dna_gg` package.
-const String dnaGgVersion = '0.11.1';
+const String dnaGgVersion = '0.12.0';
