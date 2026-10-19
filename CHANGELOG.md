@@ -5,6 +5,7 @@
 - The ticket plan names the requirements the ticket fulfils
 - Engineer the requirements before planning a ticket when the project
 management repo has none that cover it
+
 ## 0.11.1 - 2026-10-19
 
 ## 0.11.0 - 2026-10-19
