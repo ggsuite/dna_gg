@@ -100,26 +100,23 @@ packages:
   dna_github:
     dependency: "direct main"
     description:
-      name: dna_github
-      sha256: "4d11a297d838f197dfbbebb488e37e8f5a195a2945622e93b57c792bb8685a94"
-      url: "https://pub.dev"
-    source: hosted
+      path: "../dna_github"
+      relative: true
+    source: path
     version: "0.1.0"
   dna_index:
     dependency: "direct main"
     description:
-      name: dna_index
-      sha256: "46ef1b45e9cbd0a8c57e2ab35a24540f0af0572e6aae87b775039121eed17801"
-      url: "https://pub.dev"
-    source: hosted
+      path: "../dna_index"
+      relative: true
+    source: path
     version: "0.2.0"
   dna_install:
     dependency: "direct main"
     description:
-      name: dna_install
-      sha256: ff9d22a1c0d8297e30e3e17944c9dea4528a652ad93d64c57c1aa0ad2408888d
-      url: "https://pub.dev"
-    source: hosted
+      path: "../dna_install"
+      relative: true
+    source: path
     version: "0.2.0"
   ffi:
     dependency: transitive
