@@ -101,10 +101,10 @@ packages:
     dependency: "direct main"
     description:
       name: dna_github
-      sha256: "4d11a297d838f197dfbbebb488e37e8f5a195a2945622e93b57c792bb8685a94"
+      sha256: "5e5dc8f85654c091a3b6d60c49c52fd6a78267da47d39f8a41149692fe722820"
       url: "https://pub.dev"
     source: hosted
-    version: "0.1.0"
+    version: "0.1.1"
   dna_index:
     dependency: "direct main"
     description:
@@ -213,10 +213,10 @@ packages:
     dependency: "direct dev"
     description:
       name: helix
-      sha256: e7aa11c1238624f942cd8c1f596978c5ad8add2b3e783ebad6afb4826108482a
+      sha256: "10aa0e08729e50a7e38079c438538e562e81413ed249ae948d0dcaacdb052402"
       url: "https://pub.dev"
     source: hosted
-    version: "1.12.0"
+    version: "1.13.0"
   http_multi_server:
     dependency: transitive
     description:
