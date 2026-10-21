@@ -1,5 +1,7 @@
 # Changelog
 
+## 0.13.0 - 2026-10-21
+
 ## 0.12.0 - 2026-10-19
 
 - The ticket plan names the requirements the ticket fulfils
