@@ -91,9 +91,11 @@ appends the `Workspace` section.
 - `dnaJiraPrefix` — the prefix of a ticket id
 - `dnaGitQuickCheckPipelineName` — the name the branch rules require
 - `dnaPubDevPublisher` — the pub.dev publisher packages are transferred to
-- `dnaPmRepo` — the project management repo the prompts go to: a repo
-  name beside the repo's own origin, or a full git URL. Empty by default,
-  then no prompt is kept
+- `dnaPmRepo` — the project management repo the prompts go to: its name
+  with `.git` appended, e.g. `my_pm.git`, which finds it beside the repo's
+  own origin, or a full git URL. helix re-cases a bare name like `my_pm`
+  to the case of the reference, `.git` keeps it as written. Empty by
+  default, then no prompt is kept
 
 `dnaCopyrightHolder`, `dnaCompany` and `dnaJiraPrefix` name the
 organization, so they are never inherited: every layer or project listing

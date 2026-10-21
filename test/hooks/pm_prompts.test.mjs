@@ -166,6 +166,17 @@ describe('pmRepoUrl', () => {
     );
   });
 
+  test('takes a name ending in .git with the suffix of the origin', () => {
+    assert.equal(
+      pmRepoUrl('ds_x_pm.git', 'https://dev.azure.com/o/p/_git/ds-x'),
+      'https://dev.azure.com/o/p/_git/ds_x_pm',
+    );
+    assert.equal(
+      pmRepoUrl('rljson-pm.git', 'git@github.com:rljson/io.git'),
+      'git@github.com:rljson/rljson-pm.git',
+    );
+  });
+
   test('takes a full URL as is, nothing without a name', () => {
     const url = 'https://github.com/other/pm.git';
     assert.equal(pmRepoUrl(url, 'git@github.com:a/b.git'), url);
@@ -196,7 +207,7 @@ describe('the hook', () => {
   test('pushes the prompts of a repo to the prompts branch', () => {
     pmRepo('the-pm', people);
     bare('code');
-    const code = clone('code', path.join(root, 'work'), { pmRepo: 'the-pm' });
+    const code = clone('code', path.join(root, 'work'), { pmRepo: 'the-pm.git' });
 
     prompt(code, 'aaaaaaaa-1111', 'Fix the import\n# not a heading');
     prompt(code, 'aaaaaaaa-1111', 'My token is ghp_abcdefghijklmnopqrstuvwx1234');
