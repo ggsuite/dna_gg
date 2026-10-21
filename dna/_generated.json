@@ -31,7 +31,7 @@
       "ecosystem": "node",
       "resolvedVersion": "0.1.1",
       "via": null,
-      "hash": "0xae24c13573219f91"
+      "hash": "0xf541b93b3dc7995d"
     },
     {
       "name": "self",
@@ -39,7 +39,7 @@
       "ecosystem": null,
       "resolvedVersion": null,
       "via": null,
-      "hash": "0x80b4e958c7ac9afb"
+      "hash": "0x5fd10dcb2ff75d92"
     }
   ],
   "claude": {
@@ -49,6 +49,18 @@
   "baseVersion": "1.13.0",
   "baseHash": "0x6883da335b415f9d",
   "instances": [
+    {
+      "path": ".claude/hooks/pm-prompts.json",
+      "hash": "0x988e344de6ee6200"
+    },
+    {
+      "path": ".claude/hooks/pm-prompts.mjs",
+      "hash": "0xd579ad4abeb87732"
+    },
+    {
+      "path": ".claude/settings.json",
+      "hash": "0x6c6b768c3e99e867"
+    },
     {
       "path": ".claude/skills/gg-cleanup/SKILL.md",
       "hash": "0x4a6903a51168486a"
@@ -91,7 +103,7 @@
     },
     {
       "path": "doc/guides/develop-guide.md",
-      "hash": "0x84e26705681de36f"
+      "hash": "0x39718de56fdb48f0"
     },
     {
       "path": "doc/guides/develop-without-ai-guide.md",
@@ -154,12 +166,12 @@
       "hash": "0xa0da6a6877bb94c2"
     },
     {
-      "path": "doc/templates/index-template.jsonc",
-      "hash": "0x16c3a8d50c72ed6d"
+      "path": "doc/guides/setup-github-guide.md",
+      "hash": "0x836d4ca942a58b9c"
     },
     {
-      "path": "guides/setup-github-guide.md",
-      "hash": "0x8681f11bbfaa0c00"
+      "path": "doc/templates/index-template.jsonc",
+      "hash": "0x16c3a8d50c72ed6d"
     },
     {
       "path": "scripts/setup-github-repo.js",
