@@ -34,7 +34,8 @@
   },
   "scripts": {
     "test:dart": "dart test",
-    "test": "pnpm run test:dart",
+    "test:node": "node --test test/hooks/pm_prompts.test.mjs",
+    "test": "pnpm run test:dart && pnpm run test:node",
     "prepublishOnly": "pnpm run test",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
