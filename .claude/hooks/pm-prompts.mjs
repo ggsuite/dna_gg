@@ -157,14 +157,17 @@ function originOf(dir, depth = 0) {
 /**
  * The URL of the project management repo [pmRepo] beside the repo cloned
  * from [origin]: same host, same organization. A full URL is taken as is.
+ * The name may end in `.git`: the DNA writes it that way, because helix
+ * would re-case a bare name like `my_pm` into `myPm`.
  */
 export function pmRepoUrl(pmRepo, origin) {
   if (!pmRepo) return '';
   if (/^[a-z][a-z0-9+.-]*:\/\/|^[^/\\\s]+@[^/\\\s]+:/i.test(pmRepo)) {
     return pmRepo;
   }
+  const name = pmRepo.replace(/\.git$/, '');
   const match = (origin ?? '').match(/^(.*[/:\\])[^/:\\]+?(\.git)?[/\\]?$/);
-  return match ? `${match[1]}${pmRepo}${match[2] ?? ''}` : '';
+  return match ? `${match[1]}${name}${match[2] ?? ''}` : '';
 }
 
 /**
