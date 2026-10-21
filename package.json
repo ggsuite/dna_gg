@@ -1,6 +1,6 @@
 {
   "name": "@ggdna/dna-gg",
-  "version": "0.12.0",
+  "version": "0.13.0",
   "description": "DNA layer: gg CLI workflow guides, repo setup scripts and CI check",
   "keywords": [
     "dna",
@@ -34,7 +34,8 @@
   },
   "scripts": {
     "test:dart": "dart test",
-    "test": "pnpm run test:dart",
+    "test:node": "node --test test/hooks/pm_prompts.test.mjs",
+    "test": "pnpm run test:dart && pnpm run test:node",
     "prepublishOnly": "pnpm run test",
     "format": "prettier --write .",
     "format:check": "prettier --check ."

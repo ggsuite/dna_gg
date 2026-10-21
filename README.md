@@ -33,6 +33,32 @@ All skills of this layer are prefixed with `gg-`:
 - `/gg-publish` — releases the ticket
 - `/gg-cleanup` — removes what the ticket left behind
 
+## Hooks
+
+- `dna/dot-claude/settings.json` — runs `.claude/hooks/pm-prompts.mjs` on
+  the Claude Code hooks `SessionStart`, `UserPromptSubmit` and `SessionEnd`
+- `dna/dot-claude/hooks/pm-prompts.mjs` — keeps every prompt written to
+  Claude Code in the project management repo `dnaPmRepo` names. The
+  prompts wait in `~/.claude/pm-prompts/sessions/` and are committed to the
+  branch `prompts` of that repo when a session starts or ends, under
+  `doc/prompts/<first name>/<yyyy-mm>/<yyyy-mm-dd>_<repo>_<session>.md`.
+  The first name comes from the `Git` line of `doc/team/people.md` there,
+  an unknown email goes to `doc/prompts/_unknown/`. Only the prompts are
+  kept, never the answers; tokens and passwords are replaced by
+  `[redacted]`. No working tree is touched: the commit is built in a bare
+  cache below `~/.claude/pm-prompts/repos/`. Needs `node` and `git`; a
+  failure never stops a prompt and ends up in
+  `~/.claude/pm-prompts/sync.log`.
+- `dna/dot-claude/hooks/pm-prompts.json` — the name of the project
+  management repo, `dnaPmRepo`. Empty, nothing is kept. In a folder that
+  holds several repos, like a gg ticket, the prompts go to the project
+  management repos those repos name.
+
+A repo with a `.claude/settings.json` of its own moves its settings to
+`dna/dot-claude/settings.overrides.json`, otherwise the DNA overwrites
+them. Arrays are appended with a `+` after the key, e.g.
+`"SessionStart+": [ … ]` below `"hooks"`.
+
 ## Scripts
 
 - `dna/scripts/delete-feature-branch.js` — the one script this layer calls
@@ -65,6 +91,9 @@ appends the `Workspace` section.
 - `dnaJiraPrefix` — the prefix of a ticket id
 - `dnaGitQuickCheckPipelineName` — the name the branch rules require
 - `dnaPubDevPublisher` — the pub.dev publisher packages are transferred to
+- `dnaPmRepo` — the project management repo the prompts go to: a repo
+  name beside the repo's own origin, or a full git URL. Empty by default,
+  then no prompt is kept
 
 `dnaCopyrightHolder`, `dnaCompany` and `dnaJiraPrefix` name the
 organization, so they are never inherited: every layer or project listing
