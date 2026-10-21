@@ -39,7 +39,7 @@
       "ecosystem": null,
       "resolvedVersion": null,
       "via": null,
-      "hash": "0x5fd10dcb2ff75d92"
+      "hash": "0x5cf663c108f9dc04"
     }
   ],
   "claude": {
@@ -147,7 +147,7 @@
     },
     {
       "path": "doc/guides/install-guide/install-gg-workspace-guide.md",
-      "hash": "0xc06dc45d20e1bf79"
+      "hash": "0x7fca95fb9895a191"
     },
     {
       "path": "doc/guides/install-guide/install-github-cli-guide.md",
