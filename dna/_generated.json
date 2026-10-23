@@ -39,7 +39,7 @@
       "ecosystem": null,
       "resolvedVersion": null,
       "via": null,
-      "hash": "0xb282e7ad6fa403dc"
+      "hash": "0x713474ca27c6bebc"
     }
   ],
   "claude": {
@@ -83,7 +83,7 @@
     },
     {
       "path": ".claude/skills/gg-ticket/SKILL.md",
-      "hash": "0xc238102fbb3eda52"
+      "hash": "0x7e39eeb43f549b80"
     },
     {
       "path": ".claude/skills/gg/SKILL.md",
@@ -111,7 +111,7 @@
     },
     {
       "path": "doc/guides/for-ai/ai-dev-guide.md",
-      "hash": "0xba608ae9efe904ab"
+      "hash": "0xfa629b7a0fb0557a"
     },
     {
       "path": "doc/guides/index-guide.md",
