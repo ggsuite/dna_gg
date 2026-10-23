@@ -264,10 +264,17 @@ gg do commit
 ```
 
 Every repo gets its own message. When repos of the ticket depend on each
-other, never commit them with one `-m` for all: run `gg do commit` without
-`-m`, which takes the `nextCommitMessage` of each repo, or
-`gg one do commit -m"<message>"` inside each repo (see
-[Describe every repo in its own terms](#describe-every-repo-in-its-own-terms)).
+other, never commit them with one `-m` for all. Commit each repo on its own
+with its `nextCommitMessage` (see
+[Describe every repo in its own terms](#describe-every-repo-in-its-own-terms)):
+
+```bash
+cd repo1
+gg one do commit -m"<nextCommitMessage of repo1>"
+```
+
+`gg do commit` without `-m` offers the same messages, but in an editor the
+user has to confirm — leave that way to the user.
 
 `gg do commit` and `gg can commit` act on all repos of the ticket. When you
 are inside a single repo instead of the ticket folder, use the standalone

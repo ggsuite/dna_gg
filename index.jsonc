@@ -9,7 +9,7 @@
   "name": "dna_gg",
 
   // 1-2 sentence summary about this repo.
-  "summary": "DNA layer of the gg ticket workflow: dev guides, ai-dev-guide, /gg-* skills, PM prompt hook. pub dna_gg, npm @ggdna/dna-gg.",
+  "summary": "DNA layer of the gg ticket workflow: dev guides, ai-dev-guide, /gg-* skills, prompt hook for the project management repo. pub dna_gg, npm @ggdna/dna-gg.",
 
   // 1-3 bullet points: the problem space.
   "domain": [

@@ -48,8 +48,8 @@ details.
 If the user runs `gg do commit` in the ticket folder without `-m`, the
 editor already shows each repo's `nextCommitMessage` — `-m` overrides it
 with one message for all repos. Use `-m` in the ticket folder only when no
-repo of the ticket depends on another; otherwise commit each repo with its
-own message.
+repo of the ticket depends on another; otherwise commit each repo on its
+own with `gg one do commit -m` and its `nextCommitMessage`.
 
 ## 3. Commit
 
