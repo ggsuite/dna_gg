@@ -26,6 +26,12 @@ Start from `nextCommitMessage` in `.gg/publish_config.json` of each repo and
 update it there if it no longer matches the diff (see the development
 guide). Let the user confirm it.
 
+Check in the same pass whether the diff changes what the `index.jsonc` of
+the repo says — its `summary`, `domain` or `interfaces` — and update it
+before committing. If the repo has no `index.jsonc`, create it now from
+`doc/templates/index-template.jsonc`, whatever the diff. Section "Keep the index.jsonc up to date" of
+`doc/guides/for-ai/ai-dev-guide.md` has the details.
+
 If the user runs `gg do commit` in the ticket folder without `-m`, the
 editor already shows each repo's `nextCommitMessage` — `-m` overrides it
 with one message for all repos.

@@ -12,6 +12,9 @@ publish.
   instructions for an agent. Its section "Keep every repo in its scope"
   makes the agent propose on its own to split a repo, add a new or an
   existing one, or move code, whenever code leaves the scope of its repo
+  — and its section "Keep the index.jsonc up to date" makes it update the
+  `index.jsonc` with every code change that alters what the repo does or
+  uses, and create it in every repo of a ticket that has none yet
 - `dna/doc/guides/install-guide/install-gg-guide.md`,
   `dna/doc/guides/install-guide/install-gg-workspace-guide.md` — install
   `gg` and set up a workspace

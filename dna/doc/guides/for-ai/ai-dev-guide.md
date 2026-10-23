@@ -92,8 +92,10 @@ gg do add repo1 repo2
 ## Keep every repo in its scope
 
 Every repo covers one fixed scope: the `summary` and `domain` of its
-`index.jsonc`, or its README.md if it has no `index.jsonc`. Code outside
-that scope blurs the repo. Check the scope whenever you decide where code
+`index.jsonc`. If a repo has none, take the scope from its README.md and
+create the `index.jsonc` with the first change of the ticket in that repo
+(see [Keep the index.jsonc up to date](#keep-the-indexjsonc-up-to-date)).
+Code outside that scope blurs the repo. Check the scope whenever you decide where code
 goes — while choosing the repos, while implementing and before the
 review — and propose a change on your own, without being asked, as soon as
 code does not fit the repo it is in or is about to land in:
@@ -119,9 +121,11 @@ user decide:
   where it is.
 
 Whenever the scope of a repo changes, update the `index.jsonc` of each repo
-concerned: a new or split-off repo gets its own `summary` and `domain`, the
-repo that gives code away is narrowed accordingly, and `interfaces.uses`
-and `interfaces.usedBy` follow the new dependencies.
+concerned (see
+[Keep the index.jsonc up to date](#keep-the-indexjsonc-up-to-date)): a new
+or split-off repo gets its own `summary` and `domain`, the repo that gives
+code away is narrowed accordingly, and `interfaces.uses` and
+`interfaces.usedBy` follow the new dependencies.
 
 Never split a repo, add or create one, or move code without the user's
 confirmation.
@@ -161,6 +165,32 @@ ticket.
   [Keep every repo in its scope](#keep-every-repo-in-its-scope))
 - Plan only: skip this step. The following steps then apply to the project
   management repo only.
+
+## Keep the index.jsonc up to date
+
+The `index.jsonc` of a repo describes what the repo is: its `summary`, its
+`domain` and its `interfaces`. Other agents choose the repos of a ticket by
+it, so it must match the code at all times, not only at the review.
+
+Whenever you change code in a repo, check whether its `index.jsonc` still
+matches and update it in the same step:
+
+- `summary` and `domain` — when the repo can do something new, no longer
+  does something, or its scope changed
+- `interfaces.uses` — when the repo starts or stops using another repo, or
+  uses a different API of it
+- `interfaces.usedBy` — when another repo starts or stops using this one;
+  update the `uses` of that repo too, so both sides agree
+
+A repo without `index.jsonc` gets one with the first change of the ticket,
+whatever the change: copy `doc/templates/index-template.jsonc` to
+`index.jsonc` and fill it from the README.md and the code. Never leave a
+repo of the ticket without one.
+
+Follow `doc/guides/index-guide.md`: keywords instead of sentences, the
+fields of the template only. Once the file exists, a change that leaves all
+three fields true — a bug fix, a refactoring inside the repo — needs no
+update.
 
 ## Keep the publish config up to date
 
@@ -230,8 +260,8 @@ pull requests and is reviewed with the code:
 
 - Run `/blog` in every repo of the ticket that has
   `doc/guides/blog-guide.md`, the project management repo included
-- Update the index.jsonc and README.md — the `index.jsonc` also when the
-  scope of the repo changed
+- Update the README.md, and check once more that every repo has an
+  `index.jsonc` and that it matches the code of the ticket
 - Commit and push again
 
 Let the user confirm that the review phase is started.

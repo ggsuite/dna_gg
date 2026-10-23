@@ -1,0 +1,43 @@
+// @license
+// Copyright (c) ggsuite
+//
+// Use of this source code is governed by terms that can be
+// found in the LICENSE file in the root of this package.
+
+{
+  // The package name, as declared in pubspec.yaml / package.json.
+  "name": "dna_gg",
+
+  // 1-2 sentence summary about this repo.
+  "summary": "DNA layer of the gg ticket workflow: dev guides, ai-dev-guide, /gg-* skills, PM prompt hook. pub dna_gg, npm @ggdna/dna-gg.",
+
+  // 1-3 bullet points: the problem space.
+  "domain": [
+    "gg ticket workflow: ticket, commit, push, review, publish, cleanup",
+    "agent rules: repo scope, index.jsonc, publish config",
+    "install guides for gg and the gg workspace",
+  ],
+
+  // The repos this one depends on and the repos depending on it.
+  // Keep the reason or the API behind each entry, not just the name.
+  "interfaces": {
+    // "<repo-a>": "why / API"
+    "uses": {
+      "helix": "DNA engine: instantiates dna/, runDnaTest",
+      "dna_install": "parent layer: install overview",
+      "dna_index": "parent layer: index-guide, index-template, /index",
+      "dna_github": "parent layer: repo setup, quick check workflow",
+    },
+
+    // "<repo-b>": "why / API"
+    "usedBy": {
+      "dna_ggsuite": "layer",
+      "dna_ggdna": "layer",
+      "dna_dart": "layer",
+      "dna-ts": "layer",
+      "dna_tssuite": "layer",
+      "dna_rljson": "layer",
+      "helix-js": "layer",
+    },
+  },
+}
