@@ -73,11 +73,12 @@ confirmation; add the repos as shown below.
 Automatically: look at the `index.jsonc` of each repo in .ocean and decide
 which repos need to be added to the ticket.
 Make a plan for how you roughly want to implement the ticket.
-If certain parts of the implementation belong to a domain that does not yet
-exist in the .ocean folder, consider creating a new repository.
-Ask the user about this. Also explain to the user what you roughly want to
-change in which repo to implement the ticket and let them confirm that the
-corresponding repos are added to the ticket.
+Check the plan against the scope of each repo (see
+[Keep every repo in its scope](#keep-every-repo-in-its-scope)) and propose
+a split, a new repo or a move wherever a part does not fit.
+Also explain to the user what you roughly want to change in which repo to
+implement the ticket and let them confirm that the corresponding repos are
+added to the ticket.
 
 If the ticket is only planned (see below), the project management repo may
 be the only repo of the ticket.
@@ -87,6 +88,43 @@ After the user's confirmation, add the repos to the ticket:
 ```bash
 gg do add repo1 repo2
 ```
+
+## Keep every repo in its scope
+
+Every repo covers one fixed scope: the `summary` and `domain` of its
+`index.jsonc`, or its README.md if it has no `index.jsonc`. Code outside
+that scope blurs the repo. Check the scope whenever you decide where code
+goes — while choosing the repos, while implementing and before the
+review — and propose a change on your own, without being asked, as soon as
+code does not fit the repo it is in or is about to land in:
+
+- **Split a repo** — the repo has grown a second scope: propose splitting
+  it into two repos, each with a scope of its own
+- **Add a new repo** — the code belongs to a domain no repo in .ocean
+  covers: propose creating one with `gg do create repo`, which adds it to
+  the ticket
+- **Add an existing repo** — the code belongs to a repo in .ocean that is
+  not part of the ticket yet: propose adding it with `gg do add`
+- **Move code** — existing code, or code you just wrote, belongs to another
+  repo: propose moving it there
+
+For each proposal, name the code concerned, the repo it is in, the repo it
+should go to, and why it fits the scope of that repo better. Then let the
+user decide:
+
+- **Now** — change it within this ticket: add or create the repo, move the
+  code, and adjust the dependencies and imports of both sides
+- **Later** — keep it as a follow-up ticket: in the project management repo
+  if the ticket has one, otherwise in the ticket. Continue with the code
+  where it is.
+
+Whenever the scope of a repo changes, update the `index.jsonc` of each repo
+concerned: a new or split-off repo gets its own `summary` and `domain`, the
+repo that gives code away is narrowed accordingly, and `interfaces.uses`
+and `interfaces.usedBy` follow the new dependencies.
+
+Never split a repo, add or create one, or move code without the user's
+confirmation.
 
 ## Open the workspace in Vscode
 
@@ -117,7 +155,10 @@ Ask the user whether the ticket is implemented now, or whether it is only
 planned. Some tickets are only planned; the implementation follows in a later
 ticket.
 
-- Implement: implement your features based on the guides
+- Implement: implement your features based on the guides. Keep every repo
+  in its scope while you code: stop and propose a split, a new repo or a
+  move as soon as code does not fit (see
+  [Keep every repo in its scope](#keep-every-repo-in-its-scope))
 - Plan only: skip this step. The following steps then apply to the project
   management repo only.
 
@@ -180,12 +221,17 @@ gg do push
 
 ## Review
 
-Document the change in every repo first, so the documentation lands in
-the pull requests and is reviewed with the code:
+Check the diff of every repo of the ticket against its scope first (see
+[Keep every repo in its scope](#keep-every-repo-in-its-scope)) and propose
+a split, a new repo or a move for everything that does not fit.
+
+Then document the change in every repo, so the documentation lands in the
+pull requests and is reviewed with the code:
 
 - Run `/blog` in every repo of the ticket that has
   `doc/guides/blog-guide.md`, the project management repo included
-- Update the index.jsonc and README.md
+- Update the index.jsonc and README.md — the `index.jsonc` also when the
+  scope of the repo changed
 - Commit and push again
 
 Let the user confirm that the review phase is started.

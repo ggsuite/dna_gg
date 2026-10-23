@@ -9,7 +9,9 @@ publish.
   `dna/doc/guides/develop-without-ai-guide.md` — the ticket driven
   workflow, with and without an AI
 - `dna/doc/guides/for-ai/ai-dev-guide.md` — the same workflow as
-  instructions for an agent
+  instructions for an agent. Its section "Keep every repo in its scope"
+  makes the agent propose on its own to split a repo, add a new or an
+  existing one, or move code, whenever code leaves the scope of its repo
 - `dna/doc/guides/install-guide/install-gg-guide.md`,
   `dna/doc/guides/install-guide/install-gg-workspace-guide.md` — install
   `gg` and set up a workspace
@@ -26,10 +28,12 @@ publish.
 All skills of this layer are prefixed with `gg-`:
 
 - `/gg` — lists the skills below and says which one comes next
-- `/gg-ticket` — creates a ticket and adds the repos it needs
+- `/gg-ticket` — creates a ticket, adds the repos it needs and keeps
+  every repo in its scope
 - `/gg-commit` — proposes a message and commits through `gg do commit`
 - `/gg-push` — pushes the ticket branches
-- `/gg-review` — writes the blog posts and opens the pull requests
+- `/gg-review` — checks the scope of every repo, writes the blog posts
+  and opens the pull requests
 - `/gg-publish` — releases the ticket
 - `/gg-cleanup` — removes what the ticket left behind
 
