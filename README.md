@@ -14,7 +14,10 @@ publish.
   existing one, or move code, whenever code leaves the scope of its repo
   — and its section "Keep the index.jsonc up to date" makes it update the
   `index.jsonc` with every code change that alters what the repo does or
-  uses, and create it in every repo of a ticket that has none yet
+  uses, and create it in every repo of a ticket that has none yet. Its
+  section "Describe every repo in its own terms" keeps the parent repos of
+  a ticket out of what the agent writes into their dependencies: commit
+  and merge messages, changelog, blog posts, code comments, `index.jsonc`
 - `dna/doc/guides/install-guide/install-gg-guide.md`,
   `dna/doc/guides/install-guide/install-gg-workspace-guide.md` — install
   `gg` and set up a workspace

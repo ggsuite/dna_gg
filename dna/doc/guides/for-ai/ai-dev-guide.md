@@ -95,10 +95,10 @@ Every repo covers one fixed scope: the `summary` and `domain` of its
 `index.jsonc`. If a repo has none, take the scope from its README.md and
 create the `index.jsonc` with the first change of the ticket in that repo
 (see [Keep the index.jsonc up to date](#keep-the-indexjsonc-up-to-date)).
-Code outside that scope blurs the repo. Check the scope whenever you decide where code
-goes — while choosing the repos, while implementing and before the
-review — and propose a change on your own, without being asked, as soon as
-code does not fit the repo it is in or is about to land in:
+Code outside that scope blurs the repo. Check the scope whenever you decide
+where code goes — while choosing the repos, while implementing and before
+the review — and propose a change on your own, without being asked, as soon
+as code does not fit the repo it is in or is about to land in:
 
 - **Split a repo** — the repo has grown a second scope: propose splitting
   it into two repos, each with a scope of its own
@@ -159,9 +159,12 @@ Ask the user whether the ticket is implemented now, or whether it is only
 planned. Some tickets are only planned; the implementation follows in a later
 ticket.
 
-- Implement: implement your features based on the guides. Keep every repo
-  in its scope while you code: stop and propose a split, a new repo or a
-  move as soon as code does not fit (see
+- Implement: implement your features based on the guides. Write the code
+  comments and documentation of a dependency in its own terms, without its
+  parents (see
+  [Describe every repo in its own terms](#describe-every-repo-in-its-own-terms)).
+  Keep every repo in its scope while you code: stop and propose a split,
+  a new repo or a move as soon as code does not fit (see
   [Keep every repo in its scope](#keep-every-repo-in-its-scope))
 - Plan only: skip this step. The following steps then apply to the project
   management repo only.
@@ -192,6 +195,31 @@ fields of the template only. Once the file exists, a change that leaves all
 three fields true — a bug fix, a refactoring inside the repo — needs no
 update.
 
+## Describe every repo in its own terms
+
+A ticket often changes a repo together with one of its dependencies: the
+parent repo uses the dependency. The dependency does not know its parents,
+so what you write into it describes its own change only — never why a
+parent needs it. This holds for everything you write into the dependency:
+
+- commit messages, `nextCommitMessage` and `mergeMessage` — and with them
+  the `CHANGELOG.md` entry and the pull request title
+- blog posts
+- code comments and documentation
+- its `index.jsonc`, except `interfaces.usedBy`, which names the parents
+  on purpose
+
+Never name a parent repo there, nor the goal of the ticket or the use case
+of the parent. The parent, in turn, may name the dependency and what it
+uses of it.
+
+- Wrong in `gg_git`: `Add remote creation for gg do create repo`
+- Right in `gg_git`: `Add a function that creates a remote repository`
+- Right in `gg`: `Create the remote repository with gg_git`
+
+Which repo depends on which is in `interfaces.uses` of the `index.jsonc`,
+and in `pubspec.yaml` or `package.json`.
+
 ## Keep the publish config up to date
 
 Each repo of the ticket has a file `.gg/publish_config.json`. gg offers its
@@ -217,7 +245,8 @@ to change and keep the rest — `commits` is written by gg, never by hand.
 }
 ```
 
-- `firstLine`: imperative, at most 60 characters
+- `firstLine`: imperative, at most 60 characters, in the terms of the
+  repo itself (see [Describe every repo in its own terms](#describe-every-repo-in-its-own-terms))
 - `details`: optional, one entry per line
 - `mergeMessage`: the pull request title and the merge commit message of
   the repo
@@ -233,6 +262,12 @@ ticket folder reads `nextCommitMessage`; `gg one do commit` does not.
 ```bash
 gg do commit
 ```
+
+Every repo gets its own message. When repos of the ticket depend on each
+other, never commit them with one `-m` for all: run `gg do commit` without
+`-m`, which takes the `nextCommitMessage` of each repo, or
+`gg one do commit -m"<message>"` inside each repo (see
+[Describe every repo in its own terms](#describe-every-repo-in-its-own-terms)).
 
 `gg do commit` and `gg can commit` act on all repos of the ticket. When you
 are inside a single repo instead of the ticket folder, use the standalone
@@ -259,7 +294,9 @@ Then document the change in every repo, so the documentation lands in the
 pull requests and is reviewed with the code:
 
 - Run `/blog` in every repo of the ticket that has
-  `doc/guides/blog-guide.md`, the project management repo included
+  `doc/guides/blog-guide.md`, the project management repo included. A
+  dependency's post describes its own change, without its parents (see
+  [Describe every repo in its own terms](#describe-every-repo-in-its-own-terms))
 - Update the README.md, and check once more that every repo has an
   `index.jsonc` and that it matches the code of the ticket
 - Commit and push again

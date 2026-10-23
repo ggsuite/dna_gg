@@ -95,11 +95,14 @@ confirm it there. Then ask whether the ticket is implemented now or only
 planned — in the latter case the ticket ends with the project management
 repo alone.
 
-While implementing, keep every repo in its scope: stop and propose a split,
-a new repo or a move as soon as code does not fit (see below). With every
-code change, check whether the `index.jsonc` of the repo still matches and
-update it in the same step; a repo without one gets it with its first
-change — section "Keep the index.jsonc up to date" of
+While implementing, write the code comments and documentation of a
+dependency in its own terms: never name the repos of the ticket that use
+it, nor their goal (section "Describe every repo in its own terms" of
+`doc/guides/for-ai/ai-dev-guide.md`). Keep every repo in its scope: stop
+and propose a split, a new repo or a move as soon as code does not fit (see
+below). With every code change, check whether the `index.jsonc` of the repo
+still matches and update it in the same step; a repo without one gets it
+with its first change — section "Keep the index.jsonc up to date" of
 `doc/guides/for-ai/ai-dev-guide.md` says when and how.
 
 ## Keep every repo in its scope
