@@ -108,9 +108,9 @@ with its first change — section "Keep the index.jsonc up to date" of
 ## Keep every repo in its scope
 
 Every repo covers one fixed scope: the `summary` and `domain` of its
-`index.jsonc`, or its README.md as long as it has none. From choosing the repos
-until the review, propose a change on your own as soon as code does not
-fit the repo it is in or is about to land in:
+`index.jsonc`, or its README.md as long as it has none. From choosing the
+repos until the review, propose a change on your own as soon as code does
+not fit the repo it is in or is about to land in:
 
 - **Split a repo** that has grown a second scope into two repos
 - **Add a new repo** with `gg do create repo` for a domain no repo covers
