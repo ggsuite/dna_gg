@@ -96,12 +96,16 @@ planned — in the latter case the ticket ends with the project management
 repo alone.
 
 While implementing, keep every repo in its scope: stop and propose a split,
-a new repo or a move as soon as code does not fit (see below).
+a new repo or a move as soon as code does not fit (see below). With every
+code change, check whether the `index.jsonc` of the repo still matches and
+update it in the same step; a repo without one gets it with its first
+change — section "Keep the index.jsonc up to date" of
+`doc/guides/for-ai/ai-dev-guide.md` says when and how.
 
 ## Keep every repo in its scope
 
 Every repo covers one fixed scope: the `summary` and `domain` of its
-`index.jsonc`, or its README.md if it has none. From choosing the repos
+`index.jsonc`, or its README.md as long as it has none. From choosing the repos
 until the review, propose a change on your own as soon as code does not
 fit the repo it is in or is about to land in:
 

@@ -28,8 +28,10 @@ project management repo included. It comes from the `dna_blog` layer.
 - Run `/blog` in each repo that has it; skip the others
 - `/blog` stops by itself when the post already exists
 
-Update `index.jsonc` and `README.md` of each repo the ticket changed —
-`index.jsonc` also wherever the scope of a repo changed.
+Update `README.md` of each repo the ticket changed. Check once more that
+each of them has an `index.jsonc` — create it from
+`doc/templates/index-template.jsonc` if not — and that it matches the code
+of the ticket.
 
 Let the user review the changes, then run `/gg-commit` and `/gg-push`.
 
