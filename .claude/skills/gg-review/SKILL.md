@@ -26,6 +26,9 @@ Look for `doc/guides/blog-guide.md` in every repo of the ticket, the
 project management repo included. It comes from the `dna_blog` layer.
 
 - Run `/blog` in each repo that has it; skip the others
+- A dependency's post describes its own change only: it never names the
+  repos of the ticket that use it, nor their goal — section "Describe
+  every repo in its own terms" of `doc/guides/for-ai/ai-dev-guide.md`
 - `/blog` stops by itself when the post already exists
 
 Update `README.md` of each repo the ticket changed. Check once more that
