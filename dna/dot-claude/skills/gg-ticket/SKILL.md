@@ -84,7 +84,7 @@ gg do code
 
 If the project management repo keeps requirements (`doc/requirements`)
 and no accepted requirement covers the ticket, engineer them with the user
-first — with `/plan-requirements` if the repo has it — before any plan or
+first — with `/gg-plan-requirements` if the repo has it — before any plan or
 code. Bug tickets are the exception, they name their bug file.
 
 Ask the user whether the ticket is planned first. If yes, write the plan
