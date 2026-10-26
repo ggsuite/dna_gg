@@ -130,7 +130,11 @@ code away is narrowed accordingly, and `interfaces.uses` and
 Never split a repo, add or create one, or move code without the user's
 confirmation.
 
-## Open the workspace in Vscode
+## Open the workspace in Vscode — only on request
+
+Do not open VS Code on your own — many tickets need no editor. Tell the
+user they can open the workspace from the ticket folder with the following
+command, and run it only when the user asks for it:
 
 ```bash
 gg do code

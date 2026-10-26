@@ -74,11 +74,16 @@ After the confirmation:
 gg do add repo1 repo2
 ```
 
-## 5. Open the workspace
+## 5. Open the workspace only on request
+
+Do not open VS Code on your own — many tickets need no editor. Tell the
+user they can open the workspace from the ticket folder with:
 
 ```bash
 gg do code
 ```
+
+Run it only when the user asks for it.
 
 ## 6. Plan or implement
 
@@ -128,5 +133,6 @@ repo concerned. Section "Keep every repo in its scope" of
 - Never add repos without confirmation — a manually entered list counts as
   one. Rather too few than too many — more can be added later.
 - Do not start the implementation unasked.
+- Do not open VS Code unasked.
 - Never split a repo, add or create one, or move code without the user's
   confirmation.
