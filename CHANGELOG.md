@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 1.1.0 - 2026-10-26
 
 - Open VS Code only when the user asks for it, not on every new ticket
 
