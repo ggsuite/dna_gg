@@ -39,7 +39,7 @@
       "ecosystem": null,
       "resolvedVersion": null,
       "via": null,
-      "hash": "0xb2a7eaf6247a6232"
+      "hash": "0xa4329d4ad27ccd8a"
     }
   ],
   "claude": {
@@ -83,7 +83,7 @@
     },
     {
       "path": ".claude/skills/gg-review/SKILL.md",
-      "hash": "0x61f648d5050b483f"
+      "hash": "0x8583deb0630bba47"
     },
     {
       "path": ".claude/skills/gg-ticket/SKILL.md",

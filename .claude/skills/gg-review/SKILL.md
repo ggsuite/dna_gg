@@ -26,9 +26,9 @@ Look for `doc/guides/blog-guide.md` in the project management repo and in
 every other repo the ticket changed. It comes from the `dna_blog` layer.
 
 - Run `/blog` in each repo that has it; skip the others
-- Skip a repo whose branch carries nothing but gg's own `#gg:` commits:
-  it only passes the ticket through, and gg does not release it — a blog
-  post alone would force a release without a change
+- Skip a code repo the ticket only passes through — one nobody changed,
+  whatever gg committed there. gg does not release it, and a blog post
+  alone would force a release without a change
 - A dependency's post describes its own change only: it never names the
   repos of the ticket that use it, nor their goal — section "Describe
   every repo in its own terms" of `doc/guides/for-ai/ai-dev-guide.md`
