@@ -1,9 +1,9 @@
 # Changelog
 
-## Unreleased
+## 1.2.0 - 2026-10-31
 
 - Print the pull request URLs after `gg do review` and open each one
-  without auto-merge in the browser
+without auto-merge in the browser
 
 ## 1.1.1 - 2026-10-30
 
