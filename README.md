@@ -52,10 +52,12 @@ All skills of this layer are prefixed with `gg-`:
   prompts wait in `~/.claude/pm-prompts/sessions/` and are committed to the
   branch `prompts` of that repo when a session starts or ends, under
   `doc/prompts/<first name>/<yyyy-mm>/<yyyy-mm-dd>_<repo>_<session>.md`.
-  The first name comes from the `Git` line of `doc/team/people.md` there,
-  an unknown email goes to `doc/prompts/_unknown/`. Only the prompts are
-  kept, never the answers; tokens and passwords are replaced by
-  `[redacted]`. No working tree is touched: the commit is built in a bare
+  The first name comes from `doc/team/people.md` there, found by the git
+  user name: a first name equal to it or to its first word, or a `Git`
+  line listing it. An unknown name goes to `doc/prompts/_unknown/`. No
+  e-mail address is read or written; the commits carry the neutral author
+  `pm-prompts`. Only the prompts are kept, never the answers; tokens and
+  passwords are replaced by `[redacted]`. No working tree is touched: the commit is built in a bare
   cache below `~/.claude/pm-prompts/repos/`. Needs `node` and `git`; a
   failure never stops a prompt and ends up in
   `~/.claude/pm-prompts/sync.log`.

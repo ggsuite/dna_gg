@@ -39,12 +39,12 @@ function bare(name) {
   return dir;
 }
 
-function clone(name, folder, { pmRepo, email } = {}) {
+function clone(name, folder, { pmRepo, gitName } = {}) {
   const dir = path.join(folder, name);
   fs.mkdirSync(folder, { recursive: true });
   git(folder, 'clone', '-q', path.join(remotes, `${name}.git`), dir);
-  git(dir, 'config', 'user.email', email ?? 'tim@example.com');
-  git(dir, 'config', 'user.name', 'Tim');
+  git(dir, 'config', 'user.email', 'dev@example.com');
+  git(dir, 'config', 'user.name', gitName ?? 'Tim Muster');
   if (pmRepo !== undefined) {
     fs.mkdirSync(path.join(dir, '.claude', 'hooks'), { recursive: true });
     fs.writeFileSync(
@@ -72,11 +72,11 @@ const people = [
   '## Tim',
   '',
   '- Areas: import',
-  '- Git: tim@example.com, tim@home.example',
+  '- Git: Tim Muster, tmuster',
   '',
   '## Jörg',
   '',
-  '- Git: joerg@example.com',
+  '- Areas: export',
   '',
 ].join('\n');
 
@@ -188,11 +188,20 @@ describe('pmRepoUrl', () => {
 
 // .............................................................................
 describe('people', () => {
-  test('finds the person by any of the listed emails', () => {
-    assert.equal(personOf('tim@home.example', people), 'Tim');
-    assert.equal(personOf('JOERG@example.com', people), 'Jörg');
-    assert.equal(personOf('anna@example.com', people), '');
+  test('finds the person by any of the listed git names', () => {
+    assert.equal(personOf('tmuster', people), 'Tim');
+    assert.equal(personOf(' TIM MUSTER ', people), 'Tim');
+  });
+
+  test('finds the person by the first name without a Git line', () => {
+    assert.equal(personOf('Jörg', people), 'Jörg');
+    assert.equal(personOf('jörg Müller', people), 'Jörg');
+  });
+
+  test('finds nobody for an unknown or missing name', () => {
+    assert.equal(personOf('Anna Schmidt', people), '');
     assert.equal(personOf('', people), '');
+    assert.equal(personOf(undefined, people), '');
   });
 
   test('spells out umlauts in folder names', () => {
@@ -228,8 +237,15 @@ describe('the hook', () => {
     assert.match(content, /My token is \[redacted\]/);
     assert.deepEqual(buffered(), []);
 
-    // main stays untouched
+    // no e-mail address reaches the project management repo
     const pm = path.join(remotes, 'the-pm.git');
+    assert.doesNotMatch(content, /@/);
+    assert.equal(
+      git(pm, 'log', '-1', '--format=%ae %ce', promptsBranch),
+      'pm-prompts@localhost pm-prompts@localhost',
+    );
+
+    // main stays untouched
     assert.equal(git(pm, 'ls-tree', '-r', '--name-only', 'main'), 'doc/team/people.md');
   });
 
@@ -259,7 +275,7 @@ describe('the hook', () => {
     bare('code');
     const code = clone('code', path.join(root, 'work'), {
       pmRepo: 'the-pm',
-      email: 'anna@example.com',
+      gitName: 'Anna Schmidt',
     });
 
     prompt(code, 'cccccccc-3333', 'Hello');
@@ -268,7 +284,8 @@ describe('the hook', () => {
 
     const [[name, content]] = Object.entries(branchFiles('the-pm'));
     assert.match(name, /^doc\/prompts\/_unknown\//);
-    assert.match(content, /- Person: anna@example.com/);
+    assert.match(content, /- Person: Anna Schmidt\n/);
+    assert.doesNotMatch(content, /@/);
   });
 
   test('reports a ticket folder to the repos of its repos', () => {
