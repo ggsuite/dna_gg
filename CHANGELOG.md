@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Decide where new code goes before each change when the repo has the
+architecture guide
+
 ## 1.2.0 - 2026-10-31
 
 - Print the pull request URLs after `gg do review` and open each one
