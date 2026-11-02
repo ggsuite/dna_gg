@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 1.3.0 - 2026-11-02
 
 - Decide where new code goes before each change when the repo has the
 architecture guide
