@@ -1,5 +1,7 @@
 # Changelog
 
+## 1.4.0 - 2026-11-03
+
 ## 1.3.0 - 2026-11-02
 
 - Decide where new code goes before each change when the repo has the
