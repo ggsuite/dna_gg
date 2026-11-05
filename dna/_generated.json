@@ -39,7 +39,7 @@
       "ecosystem": null,
       "resolvedVersion": null,
       "via": null,
-      "hash": "0x10e35c3c4cb97369"
+      "hash": "0x2275c1d61d23204c"
     }
   ],
   "claude": {
@@ -115,7 +115,7 @@
     },
     {
       "path": "doc/guides/for-ai/ai-dev-guide.md",
-      "hash": "0xb6eecdb4c7a1ebe8"
+      "hash": "0x86178142f671bfda"
     },
     {
       "path": "doc/guides/index-guide.md",
