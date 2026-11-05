@@ -23,7 +23,7 @@ and never as a plain prose question:
 ```bash
 cd ~/dev/ # workspace
 gg do create ticket DnaJiraPrefix-145 -m"Fix issue abc"
-cd tickets/DnaJiraPrefix-145
+cd DnaJiraPrefix-145
 ```
 
 ## 3. Choose the project management repo — or work without one
