@@ -6,6 +6,7 @@
 
 - Tell the user to run `gg do publish -i <ticket>` from the workspace root,
 because Windows cannot move a ticket folder a terminal sits in
+
 ## 1.5.1 - 2026-11-06
 
 ## 1.5.0 - 2026-11-06
