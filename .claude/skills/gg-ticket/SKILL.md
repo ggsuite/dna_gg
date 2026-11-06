@@ -91,10 +91,10 @@ gg do add repo1 repo2
 ```
 
 Name all code repos in this one call, never one `gg do add` per repo —
-not even for repos you find one after the other. Every call checks the
-ocean and resolves the dependencies of the repos it touches again, so
-adding repos one by one repeats that work for every repo. The same goes
-for repos you find later, while implementing: add them together.
+not even for repos you find one after the other. Every call refreshes
+the ocean and builds the dependency graph again, and a ticket repo that
+depends on several new repos is resolved again for each call. The same
+goes for repos you find later, while implementing: add them together.
 
 ## 5. Open the workspace only on request
 

@@ -28,8 +28,8 @@ cd ~/dev/
 gg do add repo1 repo2
 ```
 
-Name all repos in one call: every call resolves the dependencies of
-the repos it touches again.
+Name all repos in one call: every call refreshes the ocean and builds
+the dependency graph again.
 
 ## Open the workspace in Vscode
 
