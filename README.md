@@ -51,10 +51,12 @@ All skills of this layer are prefixed with `gg-`:
   Claude Code in the project management repo `dnaPmRepo` names. The
   prompts wait in `~/.claude/pm-prompts/sessions/` and are committed to the
   branch `prompts` of that repo when a session starts or ends, under
-  `doc/prompts/<first name>/<yyyy-mm>/<yyyy-mm-dd>_<repo>_<session>.md`.
-  The first name comes from `doc/team/people.md` there, found by the git
+  `doc/<yyyy>-Q<n>/prompts/<first name>/<yyyy-mm-dd>_<repo>_<session>.md`,
+  the quarter of the day the session started. The first name comes from
+  `team/people.md` of the newest quarter folder there (`doc/team/people.md`
+  in a repo without quarter folders), found by the git
   user name: a first name equal to it or to its first word, or a `Git`
-  line listing it. An unknown name goes to `doc/prompts/_unknown/`. No
+  line listing it. An unknown name goes to `prompts/_unknown/`. No
   e-mail address is read or written; the commits carry the neutral author
   `pm-prompts`. Only the prompts are kept, never the answers; tokens and
   passwords are replaced by `[redacted]`. No working tree is touched: the commit is built in a bare

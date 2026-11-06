@@ -39,7 +39,7 @@
       "ecosystem": null,
       "resolvedVersion": null,
       "via": null,
-      "hash": "0x958d0143021b2328"
+      "hash": "0xff6654f75712aad8"
     }
   ],
   "claude": {
@@ -59,7 +59,7 @@
     },
     {
       "path": ".claude/hooks/pm-prompts.mjs",
-      "hash": "0xf4266eea17b3b9c1"
+      "hash": "0x6b8fdf7bbbf7c1a5"
     },
     {
       "path": ".claude/settings.json",
@@ -75,7 +75,7 @@
     },
     {
       "path": ".claude/skills/gg-publish/SKILL.md",
-      "hash": "0xcdef2684fcaaac5a"
+      "hash": "0x806b4c1fd5f6f654"
     },
     {
       "path": ".claude/skills/gg-push/SKILL.md",
@@ -87,7 +87,7 @@
     },
     {
       "path": ".claude/skills/gg-ticket/SKILL.md",
-      "hash": "0xb1095b91b3531897"
+      "hash": "0x8f9f5eb3d5567659"
     },
     {
       "path": ".claude/skills/gg/SKILL.md",
@@ -107,7 +107,7 @@
     },
     {
       "path": "doc/guides/develop-guide.md",
-      "hash": "0xed4328d138fe76ef"
+      "hash": "0x4c378a55b3c4773b"
     },
     {
       "path": "doc/guides/develop-without-ai-guide.md",
@@ -115,7 +115,7 @@
     },
     {
       "path": "doc/guides/for-ai/ai-dev-guide.md",
-      "hash": "0xe8182903f11a1766"
+      "hash": "0xa7bc4ac78f9387d6"
     },
     {
       "path": "doc/guides/index-guide.md",
