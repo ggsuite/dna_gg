@@ -19,8 +19,10 @@ import {
   findTargets,
   onEnd,
   onPrompt,
+  peopleFiles,
   personOf,
   pmRepoUrl,
+  quarterOf,
   promptsBranch,
   redact,
   slug,
@@ -55,12 +57,14 @@ function clone(name, folder, { pmRepo, gitName } = {}) {
   return dir;
 }
 
-// A project management repo with a people.md on main.
-function pmRepo(name, people) {
+// A project management repo with the people.md [files] on main, by path.
+function pmRepo(name, people, files = ['doc/2026-Q4/team/people.md']) {
   bare(name);
   const dir = clone(name, path.join(root, 'seed'));
-  fs.mkdirSync(path.join(dir, 'doc', 'team'), { recursive: true });
-  fs.writeFileSync(path.join(dir, 'doc', 'team', 'people.md'), people);
+  for (const [i, file] of files.entries()) {
+    fs.mkdirSync(path.dirname(path.join(dir, file)), { recursive: true });
+    fs.writeFileSync(path.join(dir, file), i === 0 ? people : '# People\n');
+  }
   git(dir, 'add', '.');
   git(dir, 'commit', '-q', '-m', 'Add the team');
   git(dir, 'push', '-q', 'origin', 'HEAD:main');
@@ -204,6 +208,26 @@ describe('people', () => {
     assert.equal(personOf(undefined, people), '');
   });
 
+  test('takes the team of the newest quarter, then the old doc/team', () => {
+    assert.deepEqual(
+      peopleFiles(['doc/2026-Q3', 'doc/guides', 'doc/2027-Q1', 'doc/de']),
+      [
+        'doc/2027-Q1/team/people.md',
+        'doc/2026-Q3/team/people.md',
+        'doc/team/people.md',
+      ],
+    );
+    assert.deepEqual(peopleFiles([]), ['doc/team/people.md']);
+  });
+
+  test('names the quarter of a date', () => {
+    assert.equal(quarterOf('2026-01-01'), '2026-Q1');
+    assert.equal(quarterOf('2026-03-31'), '2026-Q1');
+    assert.equal(quarterOf('2026-04-01'), '2026-Q2');
+    assert.equal(quarterOf('2026-11-06'), '2026-Q4');
+    assert.equal(quarterOf('2026-12-31'), '2026-Q4');
+  });
+
   test('spells out umlauts in folder names', () => {
     assert.equal(slug('Göran'), 'goeran');
     assert.equal(slug('Jörg Müller'), 'joerg-mueller');
@@ -228,7 +252,7 @@ describe('the hook', () => {
     assert.equal(names.length, 1);
     assert.match(
       names[0],
-      /^doc\/prompts\/tim\/\d{4}-\d{2}\/\d{4}-\d{2}-\d{2}_code_aaaaaaaa\.md$/,
+      /^doc\/\d{4}-Q[1-4]\/prompts\/tim\/\d{4}-\d{2}-\d{2}_code_aaaaaaaa\.md$/,
     );
     const content = files[names[0]];
     assert.match(content, /^# \d{4}-\d{2}-\d{2} · code · aaaaaaaa/);
@@ -246,7 +270,10 @@ describe('the hook', () => {
     );
 
     // main stays untouched
-    assert.equal(git(pm, 'ls-tree', '-r', '--name-only', 'main'), 'doc/team/people.md');
+    assert.equal(
+      git(pm, 'ls-tree', '-r', '--name-only', 'main'),
+      'doc/2026-Q4/team/people.md',
+    );
   });
 
   test('appends a resumed session to the file it started', () => {
@@ -283,9 +310,39 @@ describe('the hook', () => {
     sync();
 
     const [[name, content]] = Object.entries(branchFiles('the-pm'));
-    assert.match(name, /^doc\/prompts\/_unknown\//);
+    assert.match(name, /^doc\/\d{4}-Q[1-4]\/prompts\/_unknown\//);
     assert.match(content, /- Person: Anna Schmidt\n/);
     assert.doesNotMatch(content, /@/);
+  });
+
+  test('reads the team of the newest quarter folder', () => {
+    // Tim is only known in the newest quarter; the older one has nobody
+    pmRepo('the-pm', people, [
+      'doc/2027-Q1/team/people.md',
+      'doc/2026-Q4/team/people.md',
+    ]);
+    bare('code');
+    const code = clone('code', path.join(root, 'work'), { pmRepo: 'the-pm' });
+
+    prompt(code, 'gggggggg-7777', 'Hello');
+    onEnd({ session_id: 'gggggggg-7777' });
+    sync();
+
+    const [name] = Object.keys(branchFiles('the-pm'));
+    assert.match(name, /\/prompts\/tim\//);
+  });
+
+  test('reads the team of a repo without quarter folders', () => {
+    pmRepo('the-pm', people, ['doc/team/people.md']);
+    bare('code');
+    const code = clone('code', path.join(root, 'work'), { pmRepo: 'the-pm' });
+
+    prompt(code, 'hhhhhhhh-8888', 'Hello');
+    onEnd({ session_id: 'hhhhhhhh-8888' });
+    sync();
+
+    const [name] = Object.keys(branchFiles('the-pm'));
+    assert.match(name, /^doc\/\d{4}-Q[1-4]\/prompts\/tim\//);
   });
 
   test('reports a ticket folder to the repos of its repos', () => {
