@@ -117,7 +117,7 @@ packages:
       path: "../dna_ggsuite"
       relative: true
     source: path
-    version: "1.0.0"
+    version: "1.0.1"
   dna_github:
     dependency: "direct main"
     description:
@@ -166,7 +166,7 @@ packages:
       path: "../dna_translate"
       relative: true
     source: path
-    version: "0.3.0"
+    version: "0.4.0"
   dna_vscode:
     dependency: "direct overridden"
     description:
