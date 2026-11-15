@@ -4,6 +4,7 @@ build
 .dart_tool/
 .DS_Store
 .gg/*
+!.gg/gg_rc
 !.gg/gg.json
 .gg/gg-publish.json
 .gg/pubspec_overrides_backup.yaml
