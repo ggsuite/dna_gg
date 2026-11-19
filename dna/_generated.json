@@ -39,7 +39,7 @@
       "ecosystem": null,
       "resolvedVersion": null,
       "via": null,
-      "hash": "0x1be177dde62ec3b7"
+      "hash": "0x4fc1468b25af3394"
     }
   ],
   "claude": {
@@ -52,18 +52,6 @@
     {
       "path": ".claude/CLAUDE_dna_gg.md",
       "hash": "0xa02925c2acb04f6c"
-    },
-    {
-      "path": ".claude/hooks/pm-prompts.json",
-      "hash": "0x988e344de6ee6200"
-    },
-    {
-      "path": ".claude/hooks/pm-prompts.mjs",
-      "hash": "0x6b8fdf7bbbf7c1a5"
-    },
-    {
-      "path": ".claude/settings.json",
-      "hash": "0x6c6b768c3e99e867"
     },
     {
       "path": ".claude/skills/gg-cleanup/SKILL.md",
@@ -107,7 +95,7 @@
     },
     {
       "path": "doc/guides/develop-guide.md",
-      "hash": "0x4c378a55b3c4773b"
+      "hash": "0x84e26705681de36f"
     },
     {
       "path": "doc/guides/develop-without-ai-guide.md",
@@ -151,7 +139,7 @@
     },
     {
       "path": "doc/guides/install-guide/install-gg-workspace-guide.md",
-      "hash": "0x7fca95fb9895a191"
+      "hash": "0xdb3ddcbc3ff9278f"
     },
     {
       "path": "doc/guides/install-guide/install-github-cli-guide.md",
