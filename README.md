@@ -57,6 +57,12 @@ every repo that only wants the gg workflow. A repo that wants the full
 set lists `dna_scripts` as a layer of its own — the copies are identical,
 so both layers together produce exactly the same files.
 
+## Publishing
+
+`dna/dot-pubignore` keeps `/doc/guides/` and `/CLAUDE.md` out of the package
+`dart pub publish` uploads. helix joins it with the ignore files of the other
+layers into the project's `.pubignore`.
+
 ## Layers
 
 Builds on [dna_install](https://github.com/ggdna/dna_install) for the
