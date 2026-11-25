@@ -101,26 +101,26 @@ packages:
     dependency: "direct main"
     description:
       name: dna_github
-      sha256: "5e5dc8f85654c091a3b6d60c49c52fd6a78267da47d39f8a41149692fe722820"
+      sha256: "3190488c477ff321b1f90d30aca44a6779bb50a4ef06caf52abb2bdeca9efac3"
       url: "https://pub.dev"
     source: hosted
-    version: "0.1.1"
+    version: "0.2.0"
   dna_index:
     dependency: "direct main"
     description:
       name: dna_index
-      sha256: "46ef1b45e9cbd0a8c57e2ab35a24540f0af0572e6aae87b775039121eed17801"
+      sha256: f00fdd214e5b568bf5cb3d9a5ea4838e421de408f9c6c2e68a17a2f7a2af2afe
       url: "https://pub.dev"
     source: hosted
-    version: "0.2.0"
+    version: "0.3.0"
   dna_install:
     dependency: "direct main"
     description:
       name: dna_install
-      sha256: ff9d22a1c0d8297e30e3e17944c9dea4528a652ad93d64c57c1aa0ad2408888d
+      sha256: d32839112bbd4630ff35cb32b144727509deeb746fbc83000c3ad406a49c2d26
       url: "https://pub.dev"
     source: hosted
-    version: "0.2.0"
+    version: "0.3.0"
   ffi:
     dependency: transitive
     description:
@@ -213,10 +213,10 @@ packages:
     dependency: "direct dev"
     description:
       name: helix
-      sha256: b4751fde19f6e9fd3ec930213b0cb868859a3eb85fe75d67bcb2a76e4d026490
+      sha256: "16272a06f92ee5235a4766fd4614c8d1760aaec6dc78b542db87b25558495ddf"
       url: "https://pub.dev"
     source: hosted
-    version: "1.15.2"
+    version: "1.17.0"
   http_multi_server:
     dependency: transitive
     description:

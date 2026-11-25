@@ -15,7 +15,7 @@
       "ecosystem": "node",
       "resolvedVersion": "0.2.0",
       "via": null,
-      "hash": "0xbe88eb4256745ee1"
+      "hash": "0x6d44398210e8ef7b"
     },
     {
       "name": "dna-index",
@@ -23,7 +23,7 @@
       "ecosystem": "node",
       "resolvedVersion": "0.2.0",
       "via": null,
-      "hash": "0x1d92b0add37a1ac7"
+      "hash": "0x7507c4cbfdeabfac"
     },
     {
       "name": "dna-github",
@@ -31,7 +31,7 @@
       "ecosystem": "node",
       "resolvedVersion": "0.1.1",
       "via": null,
-      "hash": "0xf541b93b3dc7995d"
+      "hash": "0x5d579cf2e57c1869"
     },
     {
       "name": "self",
@@ -39,7 +39,7 @@
       "ecosystem": null,
       "resolvedVersion": null,
       "via": null,
-      "hash": "0x4fc1468b25af3394"
+      "hash": "0x8450771ca3189443"
     }
   ],
   "claude": {
@@ -59,7 +59,7 @@
     },
     {
       "path": ".claude/skills/gg-commit/SKILL.md",
-      "hash": "0x7fbe4b075588fc4d"
+      "hash": "0x2110f9ea606b38cd"
     },
     {
       "path": ".claude/skills/gg-publish/SKILL.md",
@@ -79,7 +79,7 @@
     },
     {
       "path": ".claude/skills/gg/SKILL.md",
-      "hash": "0x1eb3897cb31ec13b"
+      "hash": "0x99fd7df2f7156e96"
     },
     {
       "path": ".claude/skills/index/SKILL.md",
@@ -94,6 +94,10 @@
       "hash": "0xf3320fb8f530a565"
     },
     {
+      "path": ".pubignore",
+      "hash": "0xf0ed53d9fa51f388"
+    },
+    {
       "path": "doc/guides/develop-guide.md",
       "hash": "0x84e26705681de36f"
     },
@@ -103,7 +107,7 @@
     },
     {
       "path": "doc/guides/for-ai/ai-dev-guide.md",
-      "hash": "0xb3354db9fff082e9"
+      "hash": "0x8ab22c22e4df547c"
     },
     {
       "path": "doc/guides/index-guide.md",

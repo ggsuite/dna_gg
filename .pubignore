@@ -1,0 +1,26 @@
+# .gitignore
+node_modules
+coverage
+build
+.dart_tool/
+.DS_Store
+.gg/*
+!.gg/gg_rc
+!.gg/gg.json
+.gg/gg-publish.json
+.gg/pubspec_overrides_backup.yaml
+.gg/pnpm_workspace_backup.yaml
+.gg/publish_config.json
+.gg/publish_state.json
+
+# dna-install
+/doc/guides/
+
+# dna-index
+/doc/templates/
+
+# dna-github
+/scripts/
+
+# dna_gg
+/CLAUDE.md
