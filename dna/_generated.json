@@ -5,7 +5,7 @@
       "name": "base",
       "package": "helix",
       "ecosystem": null,
-      "resolvedVersion": "1.15.2",
+      "resolvedVersion": "1.16.0",
       "via": null,
       "hash": "0x6883da335b415f9d"
     },
@@ -13,25 +13,25 @@
       "name": "dna-install",
       "package": "@ggdna/dna-install",
       "ecosystem": "node",
-      "resolvedVersion": "0.2.0",
+      "resolvedVersion": "0.3.0",
       "via": null,
-      "hash": "0x6d44398210e8ef7b"
+      "hash": "0xdd129fef2172ce61"
     },
     {
       "name": "dna-index",
       "package": "@ggdna/dna-index",
       "ecosystem": "node",
-      "resolvedVersion": "0.2.0",
+      "resolvedVersion": "0.3.0",
       "via": null,
-      "hash": "0x7507c4cbfdeabfac"
+      "hash": "0xbe90f34600be3cca"
     },
     {
       "name": "dna-github",
       "package": "@ggdna/dna-github",
       "ecosystem": "node",
-      "resolvedVersion": "0.1.1",
+      "resolvedVersion": "0.2.0",
       "via": null,
-      "hash": "0x5d579cf2e57c1869"
+      "hash": "0x95188a48d02ef1da"
     },
     {
       "name": "self",
@@ -39,15 +39,17 @@
       "ecosystem": null,
       "resolvedVersion": null,
       "via": null,
-      "hash": "0x8450771ca3189443"
+      "hash": "0xcab6ec9c9f23d1e9"
     }
   ],
   "claude": {
     "claudeMdInclude": null,
-    "claudeMdFromDna": true
+    "claudeMdFromDna": true,
+    "blockHash": "0x24c24315d2f20621"
   },
-  "baseVersion": "1.15.2",
+  "baseVersion": "1.16.0",
   "baseHash": "0x6883da335b415f9d",
+  "configHash": "0xa7961b8402376e53",
   "instances": [
     {
       "path": ".claude/CLAUDE_dna_gg.md",
@@ -95,7 +97,7 @@
     },
     {
       "path": ".pubignore",
-      "hash": "0xf0ed53d9fa51f388"
+      "hash": "0x43fdf36825634b35"
     },
     {
       "path": "doc/guides/develop-guide.md",
@@ -115,7 +117,7 @@
     },
     {
       "path": "doc/guides/install-guide.md",
-      "hash": "0x4c0b8fb54b2c4636"
+      "hash": "0x55ee8bdfdfe17993"
     },
     {
       "path": "doc/guides/install-guide/install-azure-cli-guide.md",
@@ -128,10 +130,6 @@
     {
       "path": "doc/guides/install-guide/install-brew-on-mac-guide.md",
       "hash": "0x5bf663dc011c4330"
-    },
-    {
-      "path": "doc/guides/install-guide/install-corepack-guide.md",
-      "hash": "0x906ecd19a3b2366b"
     },
     {
       "path": "doc/guides/install-guide/install-flutter-guide.md",
@@ -156,6 +154,10 @@
     {
       "path": "doc/guides/install-guide/install-node-win-guide.md",
       "hash": "0x782756eb0ff83a0d"
+    },
+    {
+      "path": "doc/guides/install-guide/install-pnpm-guide.md",
+      "hash": "0x4a86eefb53b65f3b"
     },
     {
       "path": "doc/guides/install-guide/install-vscode-guide.md",
