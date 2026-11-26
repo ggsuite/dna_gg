@@ -5,7 +5,7 @@
       "name": "base",
       "package": "helix",
       "ecosystem": null,
-      "resolvedVersion": "1.16.0",
+      "resolvedVersion": "1.18.0",
       "via": null,
       "hash": "0x6883da335b415f9d"
     },
@@ -13,7 +13,7 @@
       "name": "dna-install",
       "package": "@ggdna/dna-install",
       "ecosystem": "node",
-      "resolvedVersion": "0.3.0",
+      "resolvedVersion": "0.4.0",
       "via": null,
       "hash": "0xdd129fef2172ce61"
     },
@@ -21,7 +21,7 @@
       "name": "dna-index",
       "package": "@ggdna/dna-index",
       "ecosystem": "node",
-      "resolvedVersion": "0.3.0",
+      "resolvedVersion": "0.3.1",
       "via": null,
       "hash": "0xbe90f34600be3cca"
     },
@@ -29,7 +29,7 @@
       "name": "dna-github",
       "package": "@ggdna/dna-github",
       "ecosystem": "node",
-      "resolvedVersion": "0.2.0",
+      "resolvedVersion": "0.2.1",
       "via": null,
       "hash": "0x95188a48d02ef1da"
     },
@@ -39,7 +39,7 @@
       "ecosystem": null,
       "resolvedVersion": null,
       "via": null,
-      "hash": "0xcab6ec9c9f23d1e9"
+      "hash": "0x2c3eeac934d6b207"
     }
   ],
   "claude": {
@@ -47,9 +47,10 @@
     "claudeMdFromDna": true,
     "blockHash": "0x24c24315d2f20621"
   },
-  "baseVersion": "1.16.0",
+  "baseVersion": "1.18.0",
   "baseHash": "0x6883da335b415f9d",
   "configHash": "0xa7961b8402376e53",
+  "gitignoreHash": "0x5dca9f67d6a179c6",
   "instances": [
     {
       "path": ".claude/CLAUDE_dna_gg.md",
@@ -97,7 +98,7 @@
     },
     {
       "path": ".pubignore",
-      "hash": "0x43fdf36825634b35"
+      "hash": "0xf0ed53d9fa51f388"
     },
     {
       "path": "doc/guides/develop-guide.md",
@@ -141,7 +142,7 @@
     },
     {
       "path": "doc/guides/install-guide/install-gg-workspace-guide.md",
-      "hash": "0xdb3ddcbc3ff9278f"
+      "hash": "0xd38b1b9ae9b93818"
     },
     {
       "path": "doc/guides/install-guide/install-github-cli-guide.md",
