@@ -9,14 +9,14 @@ importers:
   .:
     dependencies:
       '@ggdna/dna-github':
-        specifier: ^0.2.0
-        version: 0.2.0
+        specifier: ^0.2.1
+        version: 0.2.1
       '@ggdna/dna-index':
-        specifier: ^0.3.0
-        version: 0.3.0
+        specifier: ^0.3.1
+        version: 0.3.1
       '@ggdna/dna-install':
-        specifier: ^0.3.0
-        version: 0.3.0
+        specifier: ^0.4.0
+        version: 0.4.0
     devDependencies:
       '@types/node':
         specifier: ^26.6.6
@@ -27,16 +27,16 @@ importers:
 
 packages:
 
-  '@ggdna/dna-github@0.2.0':
-    resolution: {integrity: sha512-jzs7GER09FMk4nluDNDWPIzG4kcpRrMX9OongKzzdkmE3HiU321a4Bi7WSjev21yGvs5lIRp56LpeSBGz8NGbw==}
+  '@ggdna/dna-github@0.2.1':
+    resolution: {integrity: sha512-ceKClHYVFTxBt14MEIbA5P3Xz5kQo6KgBty99cC4wDS3aTMsAJbkFeSttNoIX9QGKm1ZlWChPzItBGnTkGWwZA==}
     engines: {node: '>=22'}
 
-  '@ggdna/dna-index@0.3.0':
-    resolution: {integrity: sha512-0yuDHhOH47yCYfVxRi8l3vbFPA3u8/is7IiisY9AQclOFmWk9RwLuZpGmW676xELieD7Z9IMCcypbfVJQqAx4g==}
+  '@ggdna/dna-index@0.3.1':
+    resolution: {integrity: sha512-yfUw++q0aXzCGGAigF9p5i3GYq6i5hXtkSsO2IEU1h3MAPB17lEVcJpPMa7knL1pa0M9HzaEcmljdo7kbzDfag==}
     engines: {node: '>=22'}
 
-  '@ggdna/dna-install@0.3.0':
-    resolution: {integrity: sha512-l4VqRAx1VlRsIaZBT0JNXX1Ev5a9SNF0hc1J/I+Mt7s4iCNtqsnztUR28abnEwAdqHRGXoWL2rDal4GuZbmLgQ==}
+  '@ggdna/dna-install@0.4.0':
+    resolution: {integrity: sha512-ot745Jba5hchV0vCjQQcBg63w+OXtCz2r2xK0GZUZI2v5ECZuW1RoULEvxHfU1/JiaSdpW2eQiYhralDuUuWrQ==}
     engines: {node: '>=22'}
 
   '@types/node@26.6.6':
@@ -52,11 +52,11 @@ packages:
 
 snapshots:
 
-  '@ggdna/dna-github@0.2.0': {}
+  '@ggdna/dna-github@0.2.1': {}
 
-  '@ggdna/dna-index@0.3.0': {}
+  '@ggdna/dna-index@0.3.1': {}
 
-  '@ggdna/dna-install@0.3.0': {}
+  '@ggdna/dna-install@0.4.0': {}
 
   '@types/node@26.6.6':
     dependencies:

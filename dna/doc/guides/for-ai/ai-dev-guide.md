@@ -8,12 +8,12 @@ found in the LICENSE file in the root of this package.
 
 # Development guide for AIs
 
-## Ask the developer what the ticket should do
+## @ask Ask the developer what the ticket should do
 
 Ask a single question: what should the ticket do? One free-text answer is
 enough — never ask for a ticket id, a title or a description separately.
 
-## Create a ticket
+## @ticket Create a ticket
 
 Derive from the answer, without asking anything else:
 
@@ -38,14 +38,14 @@ Tell the developer the id and the message right after creating the ticket —
 both can be changed any time, e.g. by renaming the folder before anything
 else is added to it, or by editing `ticket.json`.
 
-## Replace in this document
+## @replace Replace in this document
 
 - Replace `~/dev/` by the workspace directory from the memory
 - Ask for the workspace directory if none is known
 - Replace `fix_login_crash` by the ticket id you derived
 - Replace `Fix issue abc` by the ticket message you derived
 
-## Choose the project management repo — or work without one
+## @project Choose the project management repo — or work without one
 
 A ticket may belong to a project management repo. It holds the plans,
 decisions and blog posts of a project, but no code. It is optional: ask the
@@ -72,7 +72,7 @@ follow the guides that repo has.
 Without a project management repo: skip this step and continue with the git
 repositories. The ticket then carries no plan of its own.
 
-## Add git repositories
+## @git Add git repositories
 
 Ask the user how the repos are chosen, as a single question with the
 options below. Offer **only the project management repo** only when one was
@@ -110,7 +110,7 @@ the ocean and builds the dependency graph again, and a ticket repo that
 depends on several new repos is resolved again for each call. The same
 goes for repos you find later, while implementing: add them together.
 
-## Keep every repo in its scope
+## @repo Keep every repo in its scope
 
 Every repo covers one fixed scope: the `summary` and `domain` of its
 `index.jsonc`. If a repo has none, take the scope from its README.md and
@@ -152,7 +152,7 @@ code away is narrowed accordingly, and `interfaces.uses` and
 Never split a repo, add or create one, or move code without the user's
 confirmation.
 
-## Open the workspace in Vscode — only on request
+## @workspace Open the workspace in Vscode — only on request
 
 Do not open VS Code on your own — many tickets need no editor. Tell the
 user they can open the workspace from the ticket folder with the following
@@ -162,7 +162,7 @@ command, and run it only when the user asks for it:
 gg do code
 ```
 
-## Plan (optional)
+## @optional Plan (optional)
 
 Requirements come before the plan. If the project management repo keeps
 requirements (`doc/<yyyy>-Q<n>/requirements`, in the newest quarter
@@ -180,7 +180,7 @@ open questions. Without a project management repo, put the plan into the
 ticket itself. Let the user review the plan and revise it until they confirm
 it.
 
-## Implement (optional)
+## @implement Implement (optional)
 
 Ask the user whether the ticket is implemented now, or whether it is only
 planned. Some tickets are only planned; the implementation follows in a later
@@ -198,7 +198,7 @@ ticket.
 - Plan only: skip this step. The following steps then apply to the project
   management repo only.
 
-## Keep the index.jsonc up to date
+## @index Keep the index.jsonc up to date
 
 The `index.jsonc` of a repo describes what the repo is: its `summary`, its
 `domain` and its `interfaces`. Other agents choose the repos of a ticket by
@@ -224,7 +224,7 @@ fields of the template only. Once the file exists, a change that leaves all
 three fields true — a bug fix, a refactoring inside the repo — needs no
 update.
 
-## Describe every repo in its own terms
+## @repo-terms Describe every repo in its own terms
 
 A ticket often changes a repo together with one of its dependencies: the
 parent repo uses the dependency. The dependency does not know its parents,
@@ -249,7 +249,7 @@ uses of it.
 Which repo depends on which is in `interfaces.uses` of the `index.jsonc`,
 and in `pubspec.yaml` or `package.json`.
 
-## Keep the publish config up to date
+## @publish Keep the publish config up to date
 
 Each repo of the ticket has a file `.gg/publish_config.json`. gg offers its
 values as defaults: `gg do commit` pre-fills the commit message editor with
@@ -286,7 +286,7 @@ Set `mergeMessage` and `versionIncrement` as soon as the change of the repo
 is clear, and adjust them when it changes. Only `gg do commit` in the
 ticket folder reads `nextCommitMessage`; `gg one do commit` does not.
 
-## Commit
+## @commit Commit
 
 Commit from the ticket folder, all repos of the ticket at once:
 
@@ -315,7 +315,7 @@ no repo of the ticket depends on another. `gg do commit` without
 `--no-interactive` opens the messages of all repos in an editor the user
 has to confirm — leave that way to the user.
 
-## Upgrade the Dart SDK
+## @upgrade Upgrade the Dart SDK
 
 When a Dart repo shall use the newest SDK, never raise `environment: sdk:`
 in `pubspec.yaml` by hand. Install the newest Dart SDK first, then run in
@@ -333,7 +333,7 @@ reach it in one run — it cannot go beyond it. `--dry-run` instead of
 `--apply` shows the changes first. Afterwards check and commit the ticket as
 described in [Commit](#commit).
 
-## Push
+## @push Push
 
 ```bash
 gg do push
@@ -345,7 +345,7 @@ included, arrive through the nightly build (`gg do maintain --nightly`).
 Does the ticket need a newer version of a dependency right away? Raise
 its constraint as part of the change, or run `gg do push --upgrade`.
 
-## Review
+## @review Review
 
 Check the diff of every repo of the ticket against its scope first (see
 [Keep every repo in its scope](#keep-every-repo-in-its-scope)) and propose
@@ -374,7 +374,7 @@ pull requests in the browser — leave that to the user.
 
 Afterwards load the review-light skill and execute it.
 
-## Publish
+## @publish-2 Publish
 
 - Check `mergeMessage` and `versionIncrement` in `.gg/publish_config.json`
   of each repo — `gg do publish` offers them as defaults

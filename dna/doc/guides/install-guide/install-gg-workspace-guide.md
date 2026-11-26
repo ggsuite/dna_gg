@@ -8,14 +8,14 @@ found in the LICENSE file in the root of this package.
 
 # Create a gg workspace
 
-## Create a dev dir
+## @dev Create a dev dir
 
 ```bash
 mkdir -p ~/dev2
 cd ~/dev2
 ```
 
-## Init a gg workspace
+## @gg Init a gg workspace
 
 ```bash
 gg do init workspace
@@ -26,7 +26,7 @@ the workspace folder: the gg guides, the skills and the managed block of
 `CLAUDE.md`. It is the same as running `gg dna init`, `gg dna add dna_gg`
 and `gg dna build` by hand. Every ticket gets a copy of the skills.
 
-## Add your repositories
+## @repositories Add your repositories
 
 ```bash
 gg do add dnaOrgUrl

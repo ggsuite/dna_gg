@@ -8,7 +8,7 @@ found in the LICENSE file in the root of this package.
 
 # Develop without AI
 
-## Prepare everything
+## @prepare Prepare everything
 
 If you have not done that yet:
 
@@ -16,13 +16,13 @@ If you have not done that yet:
 
 [Initialize a gg workspace](./install-guide/install-gg-workspace-guide.md)
 
-## Switch into your workspace
+## @switch Switch into your workspace
 
 ```bash
 cd ~/dev/
 ```
 
-## Add repos to the ticket
+## @repos Add repos to the ticket
 
 ```bash
 gg do add repo1 repo2
@@ -31,35 +31,35 @@ gg do add repo1 repo2
 Name all repos in one call: every call refreshes the ocean and builds
 the dependency graph again.
 
-## Open the workspace in Vscode
+## @workspace Open the workspace in Vscode
 
 ```bash
 gg do code
 ```
 
-## Implement
+## @implement Implement
 
 Implement your features based on the guides
 
-## Commit
+## @commit Commit
 
 ```bash
 gg do commit
 ```
 
-## Push
+## @push Push
 
 ```bash
 gg do push
 ```
 
-## Review
+## @review Review
 
 ```bash
 gg do review
 ```
 
-## Publish
+## @publish Publish
 
 Publish from the workspace root and name the ticket with `-i`:
 

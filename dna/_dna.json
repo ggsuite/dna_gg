@@ -3,6 +3,10 @@
   // last layer of its own instantiation.
   "version": 2,
 
+  // Published as a DNA layer: helix requires a tag on every section of
+  // dna/ markdown, so the layers above can override each one.
+  "isLayer": true,
+
   // The parent DNAs. dna_install brings the install overview this layer
   // extends with the gg install guides, dna_index the index conventions
   // every gg repo follows, dna_github the GitHub repo setup and the quick

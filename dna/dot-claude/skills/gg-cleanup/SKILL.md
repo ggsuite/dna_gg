@@ -9,7 +9,7 @@ Run this only when the ticket is published. `gg do publish` already offers to
 delete the ticket and its remote feature branches — if the user accepted
 that, only step 4 is left.
 
-## 1. Verify that everything landed
+## @verify 1. Verify that everything landed
 
 Per repo of the ticket:
 
@@ -20,7 +20,7 @@ git log origin/main --oneline -3
 
 Stop and report if a repo still holds uncommitted or unmerged work.
 
-## 2. Delete the feature branches
+## @feature 2. Delete the feature branches
 
 In every repo that still sits on its feature branch (never on `main`):
 
@@ -49,7 +49,7 @@ git merge --abort
 - Non-empty status → not merged yet: `git checkout <branch>` and tell the
   user to (create and) merge a pull request first.
 
-## 3. Remove the ticket folder
+## @ticket 3. Remove the ticket folder
 
 ```bash
 cd ~/dev/ # workspace root
@@ -59,12 +59,12 @@ rm -rf fix_login_crash
 On Windows, no terminal and no VS Code window may sit in the ticket folder —
 otherwise the deletion fails with "used by another process".
 
-## 4. Update the workspace
+## @workspace 4. Update the workspace
 
 Pull `main` in the repos the ticket touched, so the workspace matches the
 release.
 
-## Important
+## @important Important
 
 - Never delete a ticket whose pull requests are still open.
 - Ask before removing the ticket folder — it may still hold notes.
