@@ -65,7 +65,7 @@ repo:
 gg do add pm_repo
 ```
 
-If it has `doc/guides/pm-repo-guide.md`, read it: it describes how the repo
+If it has `doc/en/guides/pm-repo-guide.md`, read it: it describes how the repo
 is structured and how planning works there. If the file does not exist,
 follow the guides that repo has.
 
@@ -165,7 +165,7 @@ gg do code
 ## Plan (optional)
 
 Requirements come before the plan. If the project management repo keeps
-requirements (`doc/<yyyy>-Q<n>/requirements`, in the newest quarter
+requirements (`pm/<lang>/<yyyy>-Q<n>/requirements`, in the newest quarter
 folder) and none of its accepted requirements
 covers the ticket, engineer them with the user first — with
 `/gg-plan-requirements` if the repo has it — and plan the ticket only after
@@ -174,7 +174,7 @@ that. Bug tickets are the exception, they name their bug file.
 Ask the user whether the ticket is planned before it is implemented.
 
 If yes, write the plan into the project management repo, following its
-`doc/guides/pm-repo-guide.md` if present, otherwise its other guides: the
+`doc/en/guides/pm-repo-guide.md` if present, otherwise its other guides: the
 goal, the requirements it fulfils, the affected repos, the rough steps and
 open questions. Without a project management repo, put the plan into the
 ticket itself. Let the user review the plan and revise it until they confirm
@@ -193,7 +193,7 @@ ticket.
   Keep every repo in its scope while you code: stop and propose a split,
   a new repo or a move as soon as code does not fit (see
   [Keep every repo in its scope](#keep-every-repo-in-its-scope)).
-  Before each change, if the repo has `doc/guides/architecture-guide.md`,
+  Before each change, if the repo has `doc/en/guides/architecture-guide.md`,
   decide where the code goes as its `@placement` describes
 - Plan only: skip this step. The following steps then apply to the project
   management repo only.
@@ -215,11 +215,11 @@ matches and update it in the same step:
   update the `uses` of that repo too, so both sides agree
 
 A repo without `index.jsonc` gets one with the first change of the ticket,
-whatever the change: copy `doc/templates/index-template.jsonc` to
+whatever the change: copy `doc/en/templates/index-template.jsonc` to
 `index.jsonc` and fill it from the README.md and the code. Never leave a
 repo of the ticket without one.
 
-Follow `doc/guides/index-guide.md`: keywords instead of sentences, the
+Follow `doc/en/guides/index-guide.md`: keywords instead of sentences, the
 fields of the template only. Once the file exists, a change that leaves all
 three fields true — a bug fix, a refactoring inside the repo — needs no
 update.
@@ -355,7 +355,7 @@ Then document the change in every repo, so the documentation lands in the
 pull requests and is reviewed with the code:
 
 - Run `/blog` in every repo of the ticket that has
-  `doc/guides/blog-guide.md`, the project management repo included. A
+  `doc/en/guides/blog-guide.md`, the project management repo included. A
   dependency's post describes its own change, without its parents (see
   [Describe every repo in its own terms](#describe-every-repo-in-its-own-terms))
 - Update the README.md, and check once more that every repo has an

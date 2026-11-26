@@ -11,7 +11,7 @@ found in the LICENSE file in the root of this package.
 ## Create an index.jsonc
 
 - If not present:
-  - Copy `doc/templates/index-template.jsonc` to `index.jsonc`
+  - Copy `doc/en/templates/index-template.jsonc` to `index.jsonc`
 - Keep the fields of the template, add none of your own
 - Keep the comments: they say what belongs in each field
 

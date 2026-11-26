@@ -15,7 +15,7 @@
       "ecosystem": "node",
       "resolvedVersion": "0.4.0",
       "via": null,
-      "hash": "0xdd129fef2172ce61"
+      "hash": "0x3c900ab652461666"
     },
     {
       "name": "dna-index",
@@ -23,7 +23,7 @@
       "ecosystem": "node",
       "resolvedVersion": "0.3.1",
       "via": null,
-      "hash": "0xbe90f34600be3cca"
+      "hash": "0x532ce1a52531ab4e"
     },
     {
       "name": "dna-github",
@@ -31,7 +31,7 @@
       "ecosystem": "node",
       "resolvedVersion": "0.2.1",
       "via": null,
-      "hash": "0x95188a48d02ef1da"
+      "hash": "0x22444a547c485b79"
     },
     {
       "name": "self",
@@ -39,7 +39,7 @@
       "ecosystem": null,
       "resolvedVersion": null,
       "via": null,
-      "hash": "0x2c3eeac934d6b207"
+      "hash": "0xae61f4cdf52c3c46"
     }
   ],
   "claude": {
@@ -54,7 +54,7 @@
   "instances": [
     {
       "path": ".claude/CLAUDE_dna_gg.md",
-      "hash": "0xa02925c2acb04f6c"
+      "hash": "0x4bb650f323b19657"
     },
     {
       "path": ".claude/skills/gg-cleanup/SKILL.md",
@@ -62,11 +62,11 @@
     },
     {
       "path": ".claude/skills/gg-commit/SKILL.md",
-      "hash": "0x2110f9ea606b38cd"
+      "hash": "0x73f7b066afd0d319"
     },
     {
       "path": ".claude/skills/gg-publish/SKILL.md",
-      "hash": "0x7ea44a57ed7d2ae8"
+      "hash": "0x74f377eecaeed44f"
     },
     {
       "path": ".claude/skills/gg-push/SKILL.md",
@@ -74,11 +74,11 @@
     },
     {
       "path": ".claude/skills/gg-review/SKILL.md",
-      "hash": "0x3a4506ccd5c8e1be"
+      "hash": "0x638bf80cb59c76b7"
     },
     {
       "path": ".claude/skills/gg-ticket/SKILL.md",
-      "hash": "0xa44f6e5ad54a6d0b"
+      "hash": "0xfd3c7cc8d72c2fdf"
     },
     {
       "path": ".claude/skills/gg/SKILL.md",
@@ -86,11 +86,11 @@
     },
     {
       "path": ".claude/skills/index/SKILL.md",
-      "hash": "0xc47429e51622cd7b"
+      "hash": "0x5027896ead21ed4e"
     },
     {
       "path": ".claude/skills/install/SKILL.md",
-      "hash": "0x29c4ded946b50053"
+      "hash": "0xd62a3f4ca9cbd6ed"
     },
     {
       "path": ".github/workflows/quick_check.yaml",
@@ -98,79 +98,215 @@
     },
     {
       "path": ".pubignore",
-      "hash": "0xf0ed53d9fa51f388"
+      "hash": "0xd5aab864e37f7426"
     },
     {
-      "path": "doc/guides/develop-guide.md",
+      "path": "doc/de/guides/develop-guide.md",
+      "hash": "0x5eb66576df8854e4"
+    },
+    {
+      "path": "doc/de/guides/develop-without-ai-guide.md",
+      "hash": "0x22fa8fea62e0a6b8"
+    },
+    {
+      "path": "doc/de/guides/for-ai/ai-dev-guide.md",
+      "hash": "0x2d325461d88d3bc8"
+    },
+    {
+      "path": "doc/de/guides/index-guide.md",
+      "hash": "0x21965a4bf182cead"
+    },
+    {
+      "path": "doc/de/guides/install-guide.md",
+      "hash": "0xf92b62f0910d8733"
+    },
+    {
+      "path": "doc/de/guides/install-guide/install-azure-cli-guide.md",
+      "hash": "0x9eb6f718690b139c"
+    },
+    {
+      "path": "doc/de/guides/install-guide/install-azure-npm-feed-guide.md",
+      "hash": "0x29969ffb7db4c328"
+    },
+    {
+      "path": "doc/de/guides/install-guide/install-brew-on-mac-guide.md",
+      "hash": "0x580a1aebc43ced54"
+    },
+    {
+      "path": "doc/de/guides/install-guide/install-flutter-guide.md",
+      "hash": "0xd49611ed9a8071a2"
+    },
+    {
+      "path": "doc/de/guides/install-guide/install-gg-guide.md",
+      "hash": "0x3cfc6d69f5a9eb09"
+    },
+    {
+      "path": "doc/de/guides/install-guide/install-gg-workspace-guide.md",
+      "hash": "0xfa38ef4199c86dfb"
+    },
+    {
+      "path": "doc/de/guides/install-guide/install-github-cli-guide.md",
+      "hash": "0x95dae0ab0752ad1c"
+    },
+    {
+      "path": "doc/de/guides/install-guide/install-node-mac-guide.md",
+      "hash": "0x973e31429adf2f9e"
+    },
+    {
+      "path": "doc/de/guides/install-guide/install-node-win-guide.md",
+      "hash": "0xb6b0bc893bafb301"
+    },
+    {
+      "path": "doc/de/guides/install-guide/install-pnpm-guide.md",
+      "hash": "0x19662f19d0b353f3"
+    },
+    {
+      "path": "doc/de/guides/install-guide/install-vscode-guide.md",
+      "hash": "0x966817fb7123fb53"
+    },
+    {
+      "path": "doc/de/guides/setup-github-guide.md",
+      "hash": "0xeec2b8d90a1fdcdc"
+    },
+    {
+      "path": "doc/en/guides/develop-guide.md",
       "hash": "0x84e26705681de36f"
     },
     {
-      "path": "doc/guides/develop-without-ai-guide.md",
+      "path": "doc/en/guides/develop-without-ai-guide.md",
       "hash": "0x88551202636c10c0"
     },
     {
-      "path": "doc/guides/for-ai/ai-dev-guide.md",
-      "hash": "0x8ab22c22e4df547c"
+      "path": "doc/en/guides/for-ai/ai-dev-guide.md",
+      "hash": "0xc735ffd07006ba0d"
     },
     {
-      "path": "doc/guides/index-guide.md",
-      "hash": "0xc684cc8895b98403"
+      "path": "doc/en/guides/index-guide.md",
+      "hash": "0xccae569b6c010e52"
     },
     {
-      "path": "doc/guides/install-guide.md",
+      "path": "doc/en/guides/install-guide.md",
       "hash": "0x55ee8bdfdfe17993"
     },
     {
-      "path": "doc/guides/install-guide/install-azure-cli-guide.md",
+      "path": "doc/en/guides/install-guide/install-azure-cli-guide.md",
       "hash": "0xe0206afa5fc5b085"
     },
     {
-      "path": "doc/guides/install-guide/install-azure-npm-feed-guide.md",
+      "path": "doc/en/guides/install-guide/install-azure-npm-feed-guide.md",
       "hash": "0x902df0b6dc38a92b"
     },
     {
-      "path": "doc/guides/install-guide/install-brew-on-mac-guide.md",
+      "path": "doc/en/guides/install-guide/install-brew-on-mac-guide.md",
       "hash": "0x5bf663dc011c4330"
     },
     {
-      "path": "doc/guides/install-guide/install-flutter-guide.md",
+      "path": "doc/en/guides/install-guide/install-flutter-guide.md",
       "hash": "0x883c40d890bd3d5e"
     },
     {
-      "path": "doc/guides/install-guide/install-gg-guide.md",
+      "path": "doc/en/guides/install-guide/install-gg-guide.md",
       "hash": "0xa093431b02c398d6"
     },
     {
-      "path": "doc/guides/install-guide/install-gg-workspace-guide.md",
+      "path": "doc/en/guides/install-guide/install-gg-workspace-guide.md",
       "hash": "0xd38b1b9ae9b93818"
     },
     {
-      "path": "doc/guides/install-guide/install-github-cli-guide.md",
+      "path": "doc/en/guides/install-guide/install-github-cli-guide.md",
       "hash": "0xcce9cbcd56f78b1f"
     },
     {
-      "path": "doc/guides/install-guide/install-node-mac-guide.md",
+      "path": "doc/en/guides/install-guide/install-node-mac-guide.md",
       "hash": "0x1f4eb7cf63b5c9db"
     },
     {
-      "path": "doc/guides/install-guide/install-node-win-guide.md",
+      "path": "doc/en/guides/install-guide/install-node-win-guide.md",
       "hash": "0x782756eb0ff83a0d"
     },
     {
-      "path": "doc/guides/install-guide/install-pnpm-guide.md",
+      "path": "doc/en/guides/install-guide/install-pnpm-guide.md",
       "hash": "0x4a86eefb53b65f3b"
     },
     {
-      "path": "doc/guides/install-guide/install-vscode-guide.md",
+      "path": "doc/en/guides/install-guide/install-vscode-guide.md",
       "hash": "0xa0da6a6877bb94c2"
     },
     {
-      "path": "doc/guides/setup-github-guide.md",
+      "path": "doc/en/guides/setup-github-guide.md",
       "hash": "0x836d4ca942a58b9c"
     },
     {
-      "path": "doc/templates/index-template.jsonc",
+      "path": "doc/en/templates/index-template.jsonc",
       "hash": "0x16c3a8d50c72ed6d"
+    },
+    {
+      "path": "doc/fa/guides/develop-guide.md",
+      "hash": "0xcf8bb7f4cc406679"
+    },
+    {
+      "path": "doc/fa/guides/develop-without-ai-guide.md",
+      "hash": "0xa6cec113472ba5ae"
+    },
+    {
+      "path": "doc/fa/guides/for-ai/ai-dev-guide.md",
+      "hash": "0xecb285f739cdd063"
+    },
+    {
+      "path": "doc/fa/guides/index-guide.md",
+      "hash": "0x8368dfac1e5c5740"
+    },
+    {
+      "path": "doc/fa/guides/install-guide.md",
+      "hash": "0xa181ab5c33019d40"
+    },
+    {
+      "path": "doc/fa/guides/install-guide/install-azure-cli-guide.md",
+      "hash": "0x5ab81ac1142396e8"
+    },
+    {
+      "path": "doc/fa/guides/install-guide/install-azure-npm-feed-guide.md",
+      "hash": "0x01f07ab117a74d37"
+    },
+    {
+      "path": "doc/fa/guides/install-guide/install-brew-on-mac-guide.md",
+      "hash": "0x28f3baa33872f59a"
+    },
+    {
+      "path": "doc/fa/guides/install-guide/install-flutter-guide.md",
+      "hash": "0x3e96f4fb207e50c6"
+    },
+    {
+      "path": "doc/fa/guides/install-guide/install-gg-guide.md",
+      "hash": "0xa0c7c70accd0b1e8"
+    },
+    {
+      "path": "doc/fa/guides/install-guide/install-gg-workspace-guide.md",
+      "hash": "0x4f43b3a0034b86b7"
+    },
+    {
+      "path": "doc/fa/guides/install-guide/install-github-cli-guide.md",
+      "hash": "0x220d31389db63e8e"
+    },
+    {
+      "path": "doc/fa/guides/install-guide/install-node-mac-guide.md",
+      "hash": "0x5cd76801799be6a7"
+    },
+    {
+      "path": "doc/fa/guides/install-guide/install-node-win-guide.md",
+      "hash": "0x66ea3de5a058b9c6"
+    },
+    {
+      "path": "doc/fa/guides/install-guide/install-pnpm-guide.md",
+      "hash": "0xfc2177cc7e90c0fe"
+    },
+    {
+      "path": "doc/fa/guides/install-guide/install-vscode-guide.md",
+      "hash": "0xc471865a07541430"
+    },
+    {
+      "path": "doc/fa/guides/setup-github-guide.md",
+      "hash": "0xff87e8351853abc8"
     },
     {
       "path": "scripts/setup-github-repo.js",

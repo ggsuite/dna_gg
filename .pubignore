@@ -14,10 +14,10 @@ build
 .gg/publish_state.json
 
 # dna-install
-/doc/guides/
+/doc/*/guides/
 
 # dna-index
-/doc/templates/
+/doc/*/templates/
 
 # dna-github
 /scripts/
