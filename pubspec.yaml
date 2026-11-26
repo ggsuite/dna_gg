@@ -7,9 +7,9 @@ environment:
   sdk: ">=3.14.0 <4.0.0"
 
 dependencies:
-  dna_github: ^0.2.0
-  dna_index: ^0.3.0
-  dna_install: ^0.3.0
+  dna_github: ^0.2.1
+  dna_index: ^0.3.1
+  dna_install: ^0.4.0
 
 dev_dependencies:
   helix: ^1.18.0
