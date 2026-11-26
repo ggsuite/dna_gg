@@ -5,10 +5,10 @@ publish.
 
 ## Guides
 
-- `dna/doc/guides/develop-guide.md`,
-  `dna/doc/guides/develop-without-ai-guide.md` — the ticket driven
+- `dna/doc/en/guides/develop-guide.md`,
+  `dna/doc/en/guides/develop-without-ai-guide.md` — the ticket driven
   workflow, with and without an AI
-- `dna/doc/guides/for-ai/ai-dev-guide.md` — the same workflow as
+- `dna/doc/en/guides/for-ai/ai-dev-guide.md` — the same workflow as
   instructions for an agent. Its section "Keep every repo in its scope"
   makes the agent propose on its own to split a repo, add a new or an
   existing one, or move code, whenever code leaves the scope of its repo
@@ -18,9 +18,19 @@ publish.
   section "Describe every repo in its own terms" keeps the parent repos of
   a ticket out of what the agent writes into their dependencies: commit
   and merge messages, changelog, blog posts, code comments, `index.jsonc`
-- `dna/doc/guides/install-guide/install-gg-guide.md`,
-  `dna/doc/guides/install-guide/install-gg-workspace-guide.md` — install
+- `dna/doc/en/guides/install-guide/install-gg-guide.md`,
+  `dna/doc/en/guides/install-guide/install-gg-workspace-guide.md` — install
   `gg` and set up a workspace
+
+Every file of `dna/doc/en/` also ships in German and Farsi, with the
+same name:
+
+- `dna/doc/de/guides/`
+- `dna/doc/de/guides/for-ai/`
+- `dna/doc/de/guides/install-guide/`
+- `dna/doc/fa/guides/`
+- `dna/doc/fa/guides/for-ai/`
+- `dna/doc/fa/guides/install-guide/`
 
 ## CLAUDE.md
 
@@ -59,7 +69,7 @@ so both layers together produce exactly the same files.
 
 ## Publishing
 
-`dna/dot-pubignore` keeps `/doc/guides/` and `/CLAUDE.md` out of the package
+`dna/dot-pubignore` keeps `/doc/*/guides/` and `/CLAUDE.md` out of the package
 `dart pub publish` uploads. helix joins it with the ignore files of the other
 layers into the project's `.pubignore`.
 
@@ -70,7 +80,7 @@ install overview and [dna_index](https://github.com/ggdna/dna_index) for
 the repo index every gg repo keeps.
 
 It extends the `@tooling` section of the install overview through
-`dna/doc/guides/install-guide.overrides.md`: it adds `Install gg` and
+`dna/doc/en/guides/install-guide.overrides.md`: it adds `Install gg` and
 appends the `Workspace` section.
 
 ## Variables
