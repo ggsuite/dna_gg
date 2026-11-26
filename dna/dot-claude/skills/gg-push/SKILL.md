@@ -19,7 +19,7 @@ It upgrades no dependency — the nightly build (`gg do maintain --nightly`)
 does. Only when the ticket needs a newer version right away, push with
 `gg do push --upgrade`.
 
-## Important
+## @important Important
 
 - Push only when the user asked for it.
 - Do not create pull requests here — `gg do review` does that.

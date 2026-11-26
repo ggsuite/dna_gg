@@ -10,7 +10,7 @@ creates and pushes the version tags. It is interactive — the user runs it.
 It resolves and analyzes every repo, but upgrades nothing and does not run
 the tests again.
 
-## 1. Check the preconditions
+## @preconditions 1. Check the preconditions
 
 - Every repo of the ticket is committed and pushed.
 - The pull requests created by `gg do review` are green.
@@ -18,7 +18,7 @@ the tests again.
   in `doc/blog/<yyyy>`, a project management repo in
   `doc/<yyyy>-Q<n>/blog`. If one is missing, go back to `/gg-review`.
 
-## 2. Configure the publish
+## @publish 2. Configure the publish
 
 Write per repo into `.gg/publish_config.json` (see the development guide):
 
@@ -30,7 +30,7 @@ Write per repo into `.gg/publish_config.json` (see the development guide):
 increment with these values. Never run `gg do configure-publish` yourself,
 it is interactive. Check that `CHANGELOG.md` reads well.
 
-## 3. Let the user publish
+## @user 3. Let the user publish
 
 Ask the user to run this **manually** from the workspace root, not from the
 ticket folder. Fill in the real workspace root and ticket folder:
@@ -47,7 +47,7 @@ terminal must stay outside the ticket — `-i` names the ticket instead.
 It asks whether the ticket and the remote feature branches may be deleted.
 If the user declines, run `/gg-cleanup` afterwards.
 
-## Important
+## @important Important
 
 - Never run `gg do publish` yourself.
 - Never write versions or tags by hand.

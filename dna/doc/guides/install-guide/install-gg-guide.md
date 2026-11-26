@@ -12,7 +12,7 @@ found in the LICENSE file in the root of this package.
 pre-commit checks in a single repository and orchestrates commits, pushes,
 reviews and publishes across all repositories of a ticket.
 
-## Prerequisites
+## @prerequisites Prerequisites
 
 Install [Flutter](./install-flutter-guide.md) first. It provides the `dart`
 command used below.
@@ -21,13 +21,13 @@ command used below.
 dart --version
 ```
 
-## Install gg
+## @gg Install gg
 
 ```bash
 dart pub global activate gg
 ```
 
-## Add the pub cache to your PATH
+## @pub Add the pub cache to your PATH
 
 Globally activated Dart executables are installed into the pub cache. Add its
 `bin` folder to your `PATH`, otherwise the `gg` command will not be found.
@@ -47,13 +47,13 @@ On Windows, add the following folder to your `Path` environment variable:
 
 Restart your terminal afterwards.
 
-## Verify installation
+## @installation Verify installation
 
 ```bash
 gg --help
 ```
 
-## Update gg
+## @gg-2 Update gg
 
 Run the activation again to install the latest version:
 
@@ -61,7 +61,7 @@ Run the activation again to install the latest version:
 dart pub global activate gg
 ```
 
-## Usage
+## @usage Usage
 
 `gg` is ticket driven: run it inside a ticket and every action applies to
 all repositories that belong to that ticket.

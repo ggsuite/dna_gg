@@ -9,7 +9,7 @@ Each repo documents its change first, so the documentation lands in the
 pull requests and is reviewed with the code. Every commit after
 `gg do review` voids the review.
 
-## 1. Check the scope of every repo
+## @scope 1. Check the scope of every repo
 
 Every repo covers one fixed scope: the `summary` and `domain` of its
 `index.jsonc`, or its README.md if it has none. Read the diff of every repo
@@ -20,7 +20,7 @@ the user decide whether it changes now, within this ticket, or later, as a
 follow-up ticket. Section "Keep every repo in its scope" of
 `doc/guides/for-ai/ai-dev-guide.md` has the details.
 
-## 2. Document the change in every repo
+## @change 2. Document the change in every repo
 
 Look for `doc/guides/blog-guide.md` in the project management repo and in
 every other repo the ticket changed. It comes from the `dna_blog` layer.
@@ -41,7 +41,7 @@ of the ticket.
 
 Let the user review the changes, then run `/gg-commit` and `/gg-push`.
 
-## 3. Open the pull requests
+## @pull 3. Open the pull requests
 
 Let the user confirm that the review phase is started. From the ticket
 folder:
@@ -60,7 +60,7 @@ output, so pass the URLs on:
 - Do not open the pull requests in the browser — print the URLs and leave
   opening them to the user.
 
-## 4. Review the changes
+## @changes 4. Review the changes
 
 Load the `/review-light` skill and execute it.
 
@@ -68,7 +68,7 @@ A fix goes through `/gg-commit` and `/gg-push`, then run `gg do review`
 again. Print its pull request URLs as in step 3. Update the blog post of
 the repo when the fix changes what it describes.
 
-## Important
+## @important Important
 
 - Never write a blog post in a repo without `doc/guides/blog-guide.md`.
 - Never write a blog post in a repo the ticket did not change, apart from

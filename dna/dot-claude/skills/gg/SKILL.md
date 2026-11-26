@@ -22,7 +22,7 @@ A repo may carry more `gg-` skills than these. Look at
 `.claude/skills/gg-*` and add what you find there, with the `description`
 of its `SKILL.md` as the text.
 
-## Say which skill comes next
+## @skill Say which skill comes next
 
 Read the state of the current ticket and name the next step:
 
@@ -33,6 +33,6 @@ Read the state of the current ticket and name the next step:
 - Reviewed and the pull requests are green → `/gg-publish`
 - Published → `/gg-cleanup`
 
-## Important
+## @important Important
 
 - Only list the skills, never run one of them unasked.

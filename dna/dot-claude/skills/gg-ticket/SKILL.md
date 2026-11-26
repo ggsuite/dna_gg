@@ -8,12 +8,12 @@ description: Creates a gg ticket and adds the repos it needs. Use when the user 
 All `gg do` commands run inside the workspace. Ask for the workspace
 directory if none is known.
 
-## 1. Ask what the ticket should do
+## @ticket 1. Ask what the ticket should do
 
 Ask a single question: what should the ticket do? One free-text answer is
 enough — never ask for a ticket id, a title or a description separately.
 
-## 2. Create the ticket
+## @ticket-2 2. Create the ticket
 
 Derive from the answer, without asking anything else:
 
@@ -38,7 +38,7 @@ Tell the user the id and the message right after creating the ticket — both
 can be changed any time, e.g. by renaming the folder before anything else is
 added to it, or by editing `ticket.json`.
 
-## 3. Choose the project management repo — or work without one
+## @project 3. Choose the project management repo — or work without one
 
 A ticket may belong to a project management repo: plans, decisions and blog
 posts of a project, no code. It is optional, so ask the user which way this
@@ -62,7 +62,7 @@ ticket runs:
 Call it the "project management repo" whenever you write to the user, never
 "PM repo".
 
-## 4. Choose the code repos
+## @code 4. Choose the code repos
 
 Ask the user how the code repos are chosen, as a single question with the
 options below. Offer **only the project management repo** only when one was
@@ -96,7 +96,7 @@ the ocean and builds the dependency graph again, and a ticket repo that
 depends on several new repos is resolved again for each call. The same
 goes for repos you find later, while implementing: add them together.
 
-## 5. Open the workspace only on request
+## @workspace 5. Open the workspace only on request
 
 Do not open VS Code on your own — many tickets need no editor. Tell the
 user they can open the workspace from the ticket folder with:
@@ -107,7 +107,7 @@ gg do code
 
 Run it only when the user asks for it.
 
-## 6. Plan or implement
+## @implement 6. Plan or implement
 
 If the project management repo keeps requirements
 (`doc/<yyyy>-Q<n>/requirements`, in the newest quarter folder) and no
@@ -133,7 +133,7 @@ still matches and update it in the same step; a repo without one gets it
 with its first change — section "Keep the index.jsonc up to date" of
 `doc/guides/for-ai/ai-dev-guide.md` says when and how.
 
-## Keep every repo in its scope
+## @repo Keep every repo in its scope
 
 Every repo covers one fixed scope: the `summary` and `domain` of its
 `index.jsonc`, or its README.md as long as it has none. From choosing the
@@ -152,7 +152,7 @@ follow-up ticket. After a change of scope, update the `index.jsonc` of each
 repo concerned. Section "Keep every repo in its scope" of
 `doc/guides/for-ai/ai-dev-guide.md` has the details.
 
-## Important
+## @important Important
 
 - Never add repos without confirmation — a manually entered list counts as
   one. Rather too few than too many — more can be added later.
