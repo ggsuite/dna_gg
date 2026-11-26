@@ -19,8 +19,8 @@ importers:
         version: 0.4.0
     devDependencies:
       '@types/node':
-        specifier: ^26.6.6
-        version: 26.6.6
+        specifier: ^26.6.10
+        version: 26.6.10
       prettier:
         specifier: ^3.10.1
         version: 3.10.1
@@ -39,8 +39,8 @@ packages:
     resolution: {integrity: sha512-ot745Jba5hchV0vCjQQcBg63w+OXtCz2r2xK0GZUZI2v5ECZuW1RoULEvxHfU1/JiaSdpW2eQiYhralDuUuWrQ==}
     engines: {node: '>=22'}
 
-  '@types/node@26.6.6':
-    resolution: {integrity: sha512-MzQj+8Kx3XI40OmUAE6Qoh58ZMNstNNMwn2nfd3qWsfe7nDNSqJNzes4njhz6AHwrSHOffSLwXU6yb474Q4aog==}
+  '@types/node@26.6.10':
+    resolution: {integrity: sha512-WJuPHoGB8WNQuTksNF7SOQpnH02PXeDYz4iueWbBT6/hTWnShY5F3T/hoJA3fY9+uYReDZ7pyTKKx83jQa7aGg==}
 
   prettier@3.10.1:
     resolution: {integrity: sha512-70vp3ZUYoPlFbF9uiTdXHUUCGEIp7d4+6p+8DYbkm2jP7x/3i/paXVF6dopSI3zd/CEitrZN1rc4i85xWmmXlg==}
@@ -58,7 +58,7 @@ snapshots:
 
   '@ggdna/dna-install@0.4.0': {}
 
-  '@types/node@26.6.6':
+  '@types/node@26.6.10':
     dependencies:
       undici-types: 8.9.0
 

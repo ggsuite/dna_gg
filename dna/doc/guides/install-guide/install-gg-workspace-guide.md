@@ -23,8 +23,10 @@ gg do init workspace
 
 This creates the `.ocean` folder and instantiates the latest `dna_gg` in
 the workspace folder: the gg guides, the skills and the managed block of
-`CLAUDE.md`. It is the same as running `gg dna init`, `gg dna add dna_gg`
-and `gg dna build` by hand. Every ticket gets a copy of the skills.
+`CLAUDE.md`. It does what `gg dna init` and
+`gg dna add dna_gg --workspace` do by hand — `add` builds the DNA itself,
+no `gg dna build` follows — but keeps their pub files out of the
+workspace folder. Every ticket gets a copy of the skills.
 
 ## @repositories Add your repositories
 
