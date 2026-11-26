@@ -101,26 +101,26 @@ packages:
     dependency: "direct main"
     description:
       name: dna_github
-      sha256: "8281f157a4ae700e446e40e617c19bfe727ec04082de5e02e5b3966c687a7116"
+      sha256: "167ac52d48e9e16dd94cce0ae579b7abe89e8b01d2470dc3cd9e5fb0b022db11"
       url: "https://pub.dev"
     source: hosted
-    version: "0.2.1"
+    version: "0.3.0"
   dna_index:
     dependency: "direct main"
     description:
       name: dna_index
-      sha256: "49787d373a5b4ba9289b86c3c0e26dbd5b4059867efcdb98a65d19ab728bb4c0"
+      sha256: "2610cb379d789111701eaeecf8e022029073497ea4d324f462428d96e3e7b726"
       url: "https://pub.dev"
     source: hosted
-    version: "0.3.1"
+    version: "0.4.0"
   dna_install:
     dependency: "direct main"
     description:
       name: dna_install
-      sha256: c7f73a7c73813e1b2d60c75117c66d3733ed795ae68b6d76731e5d93de60e94b
+      sha256: "481e71bb89d9ee03ffb6d95e39e9d6cadbffaa9b01825ba5c9bcf164fb73975c"
       url: "https://pub.dev"
     source: hosted
-    version: "0.4.0"
+    version: "0.5.0"
   ffi:
     dependency: transitive
     description:
